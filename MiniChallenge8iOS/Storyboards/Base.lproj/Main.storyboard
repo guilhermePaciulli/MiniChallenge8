@@ -6,10 +6,16 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="pricedown bl.ttf">
+            <string>PricedownBl-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Connection View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -56,5 +62,106 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="92.203898050974516"/>
         </scene>
+        <!--Waiting View Controller-->
+        <scene sceneID="XGG-6W-JU4">
+            <objects>
+                <viewController storyboardIdentifier="waitingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fqd-5o-M7f" customClass="WaitingViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N9A-Uj-Y2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="waitingScreenBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Fzi-a1-SiG">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aguardando..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="11n-we-13h">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="36"/>
+                                <color key="textColor" red="1" green="0.83921568627450982" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="11n-we-13h" firstAttribute="centerY" secondItem="Fzi-a1-SiG" secondAttribute="centerY" id="5bB-Ty-VzX"/>
+                            <constraint firstItem="11n-we-13h" firstAttribute="centerX" secondItem="Fzi-a1-SiG" secondAttribute="centerX" id="Kf8-Iz-bo9"/>
+                            <constraint firstItem="Fzi-a1-SiG" firstAttribute="centerY" secondItem="qe6-ka-TX3" secondAttribute="centerY" id="MAr-Yh-7qG"/>
+                            <constraint firstItem="Fzi-a1-SiG" firstAttribute="height" secondItem="N9A-Uj-Y2Z" secondAttribute="height" id="WAg-UX-DnR"/>
+                            <constraint firstItem="Fzi-a1-SiG" firstAttribute="centerX" secondItem="qe6-ka-TX3" secondAttribute="centerX" id="YGe-s5-2WU"/>
+                            <constraint firstItem="11n-we-13h" firstAttribute="width" secondItem="Fzi-a1-SiG" secondAttribute="width" id="bS8-rm-uYL"/>
+                            <constraint firstItem="Fzi-a1-SiG" firstAttribute="width" secondItem="N9A-Uj-Y2Z" secondAttribute="width" id="cSJ-5a-7aD"/>
+                            <constraint firstItem="11n-we-13h" firstAttribute="height" secondItem="Fzi-a1-SiG" secondAttribute="height" id="wPP-dN-TIM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qe6-ka-TX3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3z-FV-VPU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="92"/>
+        </scene>
+        <!--Reaction View Controller-->
+        <scene sceneID="lNy-30-6ln">
+            <objects>
+                <viewController storyboardIdentifier="reactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HiA-hc-UBe" customClass="ReactionViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9uv-4l-dnO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reactionScreen" translatesAutoresizingMaskIntoConstraints="NO" id="S5t-qC-Kjk">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moneyReactionButton" translatesAutoresizingMaskIntoConstraints="NO" id="Kgd-IK-U72">
+                                <rect key="frame" x="87" y="209" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kgd-IK-U72" secondAttribute="height" multiplier="1:1" id="arO-UV-2An"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clique ou balance para reagir" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U5B-jx-J0P">
+                                <rect key="frame" x="57" y="450" width="262.5" height="66.5"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.83921568627450982" blue="0.31764705882352939" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="S5t-qC-Kjk" firstAttribute="centerX" secondItem="ag8-lp-DbI" secondAttribute="centerX" id="1Oa-h6-oqR"/>
+                            <constraint firstItem="U5B-jx-J0P" firstAttribute="width" secondItem="9uv-4l-dnO" secondAttribute="width" multiplier="0.7" id="8cN-bV-lsO"/>
+                            <constraint firstItem="S5t-qC-Kjk" firstAttribute="width" secondItem="9uv-4l-dnO" secondAttribute="width" id="Ai8-QU-1vq"/>
+                            <constraint firstItem="S5t-qC-Kjk" firstAttribute="bottom" secondItem="ag8-lp-DbI" secondAttribute="bottom" constant="10" id="DMe-pP-EOK"/>
+                            <constraint firstItem="U5B-jx-J0P" firstAttribute="height" secondItem="9uv-4l-dnO" secondAttribute="height" multiplier="0.1" id="Pme-50-lnt"/>
+                            <constraint firstItem="Kgd-IK-U72" firstAttribute="centerX" secondItem="S5t-qC-Kjk" secondAttribute="centerX" id="XUI-CA-ATN"/>
+                            <constraint firstItem="S5t-qC-Kjk" firstAttribute="height" secondItem="9uv-4l-dnO" secondAttribute="height" id="YHg-zW-od3"/>
+                            <constraint firstItem="Kgd-IK-U72" firstAttribute="height" secondItem="S5t-qC-Kjk" secondAttribute="height" multiplier="0.3" id="lXd-yl-JHq"/>
+                            <constraint firstItem="Kgd-IK-U72" firstAttribute="centerY" secondItem="S5t-qC-Kjk" secondAttribute="centerY" multiplier="0.9" id="oQj-PU-UNC"/>
+                            <constraint firstItem="U5B-jx-J0P" firstAttribute="baseline" secondItem="Kgd-IK-U72" secondAttribute="baseline" multiplier="1.25" id="sHb-cJ-Nm6"/>
+                            <constraint firstItem="U5B-jx-J0P" firstAttribute="centerX" secondItem="ag8-lp-DbI" secondAttribute="centerX" id="u2N-uv-bzW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ag8-lp-DbI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wJn-Z9-O2k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.5999999999999" y="90.404797601199405"/>
+        </scene>
+        <!--Pre Battle View Controller-->
+        <scene sceneID="pgD-pM-jOy">
+            <objects>
+                <viewController storyboardIdentifier="preBattleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FiL-3W-Bjf" customClass="PreBattleViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U1y-aZ-Zgl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uDZ-Mu-mmR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wke-XK-qpf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2686" y="92"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="moneyReactionButton" width="202" height="202"/>
+        <image name="reactionScreen" width="375" height="812"/>
+        <image name="waitingScreenBackground" width="375" height="812"/>
+    </resources>
 </document>
