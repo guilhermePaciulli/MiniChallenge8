@@ -750,7 +750,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLLH384AC4;
-				INFOPLIST_FILE = MiniChallenge8/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -771,7 +771,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLLH384AC4;
-				INFOPLIST_FILE = MiniChallenge8/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
