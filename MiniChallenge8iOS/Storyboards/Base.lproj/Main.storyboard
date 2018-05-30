@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FiL-3W-Bjf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -65,7 +65,7 @@
         <!--Waiting View Controller-->
         <scene sceneID="XGG-6W-JU4">
             <objects>
-                <viewController storyboardIdentifier="waitingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fqd-5o-M7f" customClass="WaitingViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="waitingViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fqd-5o-M7f" customClass="WaitingViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N9A-Uj-Y2Z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
         <!--Reaction View Controller-->
         <scene sceneID="lNy-30-6ln">
             <objects>
-                <viewController storyboardIdentifier="reactionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HiA-hc-UBe" customClass="ReactionViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="reactionViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HiA-hc-UBe" customClass="ReactionViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9uv-4l-dnO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +146,7 @@
         <!--Pre Battle View Controller-->
         <scene sceneID="pgD-pM-jOy">
             <objects>
-                <viewController storyboardIdentifier="preBattleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FiL-3W-Bjf" customClass="PreBattleViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="preBattleViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FiL-3W-Bjf" customClass="PreBattleViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1y-aZ-Zgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -26,14 +26,19 @@ class PlayerStruct: Codable {
     
 }
 
+class ChooseStarterStruct: Codable {
+    let starter: Starter
+    init(starter: Starter) {
+        self.starter = starter
+    }
+}
+
 class FeedbackStruct: Codable {
     
 }
 
 class DisplayScreen: Codable {
-    
     let screen: Screen
-    
     init(screen: Screen) {
         self.screen = screen
     }
@@ -41,4 +46,9 @@ class DisplayScreen: Codable {
 
 enum Screen: String, Codable {
     case waiting = "waitingScreen"
+}
+
+enum Starter: String, Codable {
+    case player = "player"
+    case opponent = "opponent"
 }
