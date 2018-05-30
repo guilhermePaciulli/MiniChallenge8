@@ -8,11 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB45420BDED1B00F8ABDE /* AppDelegate.swift */; };
-		BD6DB45720BDED1B00F8ABDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB45620BDED1B00F8ABDE /* ViewController.swift */; };
 		BD6DB45A20BDED1B00F8ABDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB45820BDED1B00F8ABDE /* Main.storyboard */; };
 		BD6DB45C20BDED1E00F8ABDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB45B20BDED1E00F8ABDE /* Assets.xcassets */; };
 		BD6DB46720BDED1E00F8ABDE /* MiniChallenge8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB46620BDED1E00F8ABDE /* MiniChallenge8Tests.swift */; };
 		BD6DB47220BDED1E00F8ABDE /* MiniChallenge8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB47120BDED1E00F8ABDE /* MiniChallenge8UITests.swift */; };
+		BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */; };
+		BD6DB48820BDF43C00F8ABDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB48720BDF43C00F8ABDE /* ViewController.swift */; };
+		BD6DB48B20BDF43C00F8ABDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48920BDF43C00F8ABDE /* Main.storyboard */; };
+		BD6DB48D20BDF43D00F8ABDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */; };
+		BD6DB49020BDF43D00F8ABDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */; };
+		BD6DB49B20BDF43D00F8ABDE /* MiniChallenge8iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB49A20BDF43D00F8ABDE /* MiniChallenge8iOSTests.swift */; };
+		BD6DB4A620BDF43D00F8ABDE /* MiniChallenge8iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4A520BDF43D00F8ABDE /* MiniChallenge8iOSUITests.swift */; };
+		BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B120BE1B8400F8ABDE /* MPHelper.swift */; };
+		BD6DB4B420BE250400F8ABDE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B320BE250400F8ABDE /* State.swift */; };
+		BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B520BE28F600F8ABDE /* MPServices.swift */; };
+		BD6DB4BC20BE2B7600F8ABDE /* TimeoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4BB20BE2B7600F8ABDE /* TimeoutState.swift */; };
+		BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */; };
+		BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */; };
+		BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */; };
+		BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4C620BE360B00F8ABDE /* SortStarterState.swift */; };
+		BD6DB4C920BE361A00F8ABDE /* ChooseStarterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4C820BE361A00F8ABDE /* ChooseStarterState.swift */; };
+		BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */; };
+		BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */; };
+		BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D220BEDEA900F8ABDE /* Player.swift */; };
+		BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,12 +49,25 @@
 			remoteGlobalIDString = BD6DB45020BDED1B00F8ABDE;
 			remoteInfo = MiniChallenge8;
 		};
+		BD6DB49720BDF43D00F8ABDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD6DB44920BDED1B00F8ABDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD6DB48220BDF43C00F8ABDE;
+			remoteInfo = MiniChallenge8iOS;
+		};
+		BD6DB4A220BDF43D00F8ABDE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD6DB44920BDED1B00F8ABDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD6DB48220BDF43C00F8ABDE;
+			remoteInfo = MiniChallenge8iOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BD6DB45120BDED1B00F8ABDE /* MiniChallenge8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6DB45420BDED1B00F8ABDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD6DB45620BDED1B00F8ABDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD6DB45920BDED1B00F8ABDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD6DB45B20BDED1E00F8ABDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD6DB45D20BDED1E00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +77,32 @@
 		BD6DB46D20BDED1E00F8ABDE /* MiniChallenge8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6DB47120BDED1E00F8ABDE /* MiniChallenge8UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge8UITests.swift; sourceTree = "<group>"; };
 		BD6DB47320BDED1E00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6DB48320BDF43C00F8ABDE /* MiniChallenge8iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge8iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD6DB48720BDF43C00F8ABDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD6DB48A20BDF43C00F8ABDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD6DB48F20BDF43D00F8ABDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD6DB49120BDF43D00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6DB49620BDF43D00F8ABDE /* MiniChallenge8iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge8iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6DB49A20BDF43D00F8ABDE /* MiniChallenge8iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge8iOSTests.swift; sourceTree = "<group>"; };
+		BD6DB49C20BDF43D00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6DB4A120BDF43D00F8ABDE /* MiniChallenge8iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MiniChallenge8iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD6DB4A520BDF43D00F8ABDE /* MiniChallenge8iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniChallenge8iOSUITests.swift; sourceTree = "<group>"; };
+		BD6DB4A720BDF43D00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6DB4B120BE1B8400F8ABDE /* MPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHelper.swift; sourceTree = "<group>"; };
+		BD6DB4B320BE250400F8ABDE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		BD6DB4B520BE28F600F8ABDE /* MPServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPServices.swift; sourceTree = "<group>"; };
+		BD6DB4BB20BE2B7600F8ABDE /* TimeoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutState.swift; sourceTree = "<group>"; };
+		BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnState.swift; sourceTree = "<group>"; };
+		BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundWinnerState.swift; sourceTree = "<group>"; };
+		BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRoundState.swift; sourceTree = "<group>"; };
+		BD6DB4C620BE360B00F8ABDE /* SortStarterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortStarterState.swift; sourceTree = "<group>"; };
+		BD6DB4C820BE361A00F8ABDE /* ChooseStarterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseStarterState.swift; sourceTree = "<group>"; };
+		BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWinnerState.swift; sourceTree = "<group>"; };
+		BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBattleState.swift; sourceTree = "<group>"; };
+		BD6DB4D220BEDEA900F8ABDE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +127,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD6DB48020BDF43C00F8ABDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49320BDF43D00F8ABDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49E20BDF43D00F8ABDE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +157,9 @@
 				BD6DB45320BDED1B00F8ABDE /* MiniChallenge8 */,
 				BD6DB46520BDED1E00F8ABDE /* MiniChallenge8Tests */,
 				BD6DB47020BDED1E00F8ABDE /* MiniChallenge8UITests */,
+				BD6DB48420BDF43C00F8ABDE /* MiniChallenge8iOS */,
+				BD6DB49920BDF43D00F8ABDE /* MiniChallenge8iOSTests */,
+				BD6DB4A420BDF43D00F8ABDE /* MiniChallenge8iOSUITests */,
 				BD6DB45220BDED1B00F8ABDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +170,9 @@
 				BD6DB45120BDED1B00F8ABDE /* MiniChallenge8.app */,
 				BD6DB46220BDED1E00F8ABDE /* MiniChallenge8Tests.xctest */,
 				BD6DB46D20BDED1E00F8ABDE /* MiniChallenge8UITests.xctest */,
+				BD6DB48320BDF43C00F8ABDE /* MiniChallenge8iOS.app */,
+				BD6DB49620BDF43D00F8ABDE /* MiniChallenge8iOSTests.xctest */,
+				BD6DB4A120BDF43D00F8ABDE /* MiniChallenge8iOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +180,12 @@
 		BD6DB45320BDED1B00F8ABDE /* MiniChallenge8 */ = {
 			isa = PBXGroup;
 			children = (
-				BD6DB45420BDED1B00F8ABDE /* AppDelegate.swift */,
-				BD6DB45620BDED1B00F8ABDE /* ViewController.swift */,
-				BD6DB45820BDED1B00F8ABDE /* Main.storyboard */,
-				BD6DB45B20BDED1E00F8ABDE /* Assets.xcassets */,
-				BD6DB45D20BDED1E00F8ABDE /* Info.plist */,
+				BD6DB4D820BEE24C00F8ABDE /* Storyboards */,
+				BD6DB4D920BEE25300F8ABDE /* ViewControllers */,
+				BD6DB4B820BE292500F8ABDE /* States */,
+				BD6DB4D420BEDEB300F8ABDE /* Model */,
+				BD6DB4B720BE28FD00F8ABDE /* Multipeer */,
+				BD6DB4D720BEE23E00F8ABDE /* Misc */,
 			);
 			path = MiniChallenge8;
 			sourceTree = "<group>";
@@ -120,6 +206,96 @@
 				BD6DB47320BDED1E00F8ABDE /* Info.plist */,
 			);
 			path = MiniChallenge8UITests;
+			sourceTree = "<group>";
+		};
+		BD6DB48420BDF43C00F8ABDE /* MiniChallenge8iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */,
+				BD6DB48720BDF43C00F8ABDE /* ViewController.swift */,
+				BD6DB48920BDF43C00F8ABDE /* Main.storyboard */,
+				BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */,
+				BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */,
+				BD6DB49120BDF43D00F8ABDE /* Info.plist */,
+			);
+			path = MiniChallenge8iOS;
+			sourceTree = "<group>";
+		};
+		BD6DB49920BDF43D00F8ABDE /* MiniChallenge8iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB49A20BDF43D00F8ABDE /* MiniChallenge8iOSTests.swift */,
+				BD6DB49C20BDF43D00F8ABDE /* Info.plist */,
+			);
+			path = MiniChallenge8iOSTests;
+			sourceTree = "<group>";
+		};
+		BD6DB4A420BDF43D00F8ABDE /* MiniChallenge8iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB4A520BDF43D00F8ABDE /* MiniChallenge8iOSUITests.swift */,
+				BD6DB4A720BDF43D00F8ABDE /* Info.plist */,
+			);
+			path = MiniChallenge8iOSUITests;
+			sourceTree = "<group>";
+		};
+		BD6DB4B720BE28FD00F8ABDE /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB4B120BE1B8400F8ABDE /* MPHelper.swift */,
+				BD6DB4B520BE28F600F8ABDE /* MPServices.swift */,
+			);
+			path = Multipeer;
+			sourceTree = "<group>";
+		};
+		BD6DB4B820BE292500F8ABDE /* States */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB4B320BE250400F8ABDE /* State.swift */,
+				BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */,
+				BD6DB4C620BE360B00F8ABDE /* SortStarterState.swift */,
+				BD6DB4C820BE361A00F8ABDE /* ChooseStarterState.swift */,
+				BD6DB4BB20BE2B7600F8ABDE /* TimeoutState.swift */,
+				BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */,
+				BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */,
+				BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */,
+				BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		BD6DB4D420BEDEB300F8ABDE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB4D220BEDEA900F8ABDE /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BD6DB4D720BEE23E00F8ABDE /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB45420BDED1B00F8ABDE /* AppDelegate.swift */,
+				BD6DB45B20BDED1E00F8ABDE /* Assets.xcassets */,
+				BD6DB45D20BDED1E00F8ABDE /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		BD6DB4D820BEE24C00F8ABDE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB45820BDED1B00F8ABDE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD6DB4D920BEE25300F8ABDE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +354,59 @@
 			productReference = BD6DB46D20BDED1E00F8ABDE /* MiniChallenge8UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BD6DB48220BDF43C00F8ABDE /* MiniChallenge8iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6DB4A820BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOS" */;
+			buildPhases = (
+				BD6DB47F20BDF43C00F8ABDE /* Sources */,
+				BD6DB48020BDF43C00F8ABDE /* Frameworks */,
+				BD6DB48120BDF43C00F8ABDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniChallenge8iOS;
+			productName = MiniChallenge8iOS;
+			productReference = BD6DB48320BDF43C00F8ABDE /* MiniChallenge8iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD6DB49520BDF43D00F8ABDE /* MiniChallenge8iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6DB4AB20BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOSTests" */;
+			buildPhases = (
+				BD6DB49220BDF43D00F8ABDE /* Sources */,
+				BD6DB49320BDF43D00F8ABDE /* Frameworks */,
+				BD6DB49420BDF43D00F8ABDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD6DB49820BDF43D00F8ABDE /* PBXTargetDependency */,
+			);
+			name = MiniChallenge8iOSTests;
+			productName = MiniChallenge8iOSTests;
+			productReference = BD6DB49620BDF43D00F8ABDE /* MiniChallenge8iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD6DB4A020BDF43D00F8ABDE /* MiniChallenge8iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD6DB4AE20BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOSUITests" */;
+			buildPhases = (
+				BD6DB49D20BDF43D00F8ABDE /* Sources */,
+				BD6DB49E20BDF43D00F8ABDE /* Frameworks */,
+				BD6DB49F20BDF43D00F8ABDE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD6DB4A320BDF43D00F8ABDE /* PBXTargetDependency */,
+			);
+			name = MiniChallenge8iOSUITests;
+			productName = MiniChallenge8iOSUITests;
+			productReference = BD6DB4A120BDF43D00F8ABDE /* MiniChallenge8iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,6 +428,17 @@
 						CreatedOnToolsVersion = 9.3.1;
 						TestTargetID = BD6DB45020BDED1B00F8ABDE;
 					};
+					BD6DB48220BDF43C00F8ABDE = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					BD6DB49520BDF43D00F8ABDE = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = BD6DB48220BDF43C00F8ABDE;
+					};
+					BD6DB4A020BDF43D00F8ABDE = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = BD6DB48220BDF43C00F8ABDE;
+					};
 				};
 			};
 			buildConfigurationList = BD6DB44C20BDED1B00F8ABDE /* Build configuration list for PBXProject "MiniChallenge8" */;
@@ -217,6 +457,9 @@
 				BD6DB45020BDED1B00F8ABDE /* MiniChallenge8 */,
 				BD6DB46120BDED1E00F8ABDE /* MiniChallenge8Tests */,
 				BD6DB46C20BDED1E00F8ABDE /* MiniChallenge8UITests */,
+				BD6DB48220BDF43C00F8ABDE /* MiniChallenge8iOS */,
+				BD6DB49520BDF43D00F8ABDE /* MiniChallenge8iOSTests */,
+				BD6DB4A020BDF43D00F8ABDE /* MiniChallenge8iOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +488,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD6DB48120BDF43C00F8ABDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6DB49020BDF43D00F8ABDE /* LaunchScreen.storyboard in Resources */,
+				BD6DB48D20BDF43D00F8ABDE /* Assets.xcassets in Resources */,
+				BD6DB48B20BDF43C00F8ABDE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49420BDF43D00F8ABDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49F20BDF43D00F8ABDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -252,8 +519,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD6DB45720BDED1B00F8ABDE /* ViewController.swift in Sources */,
+				BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */,
+				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
+				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
+				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
+				BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */,
 				BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */,
+				BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */,
+				BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */,
+				BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */,
+				BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */,
+				BD6DB4BC20BE2B7600F8ABDE /* TimeoutState.swift in Sources */,
+				BD6DB4C920BE361A00F8ABDE /* ChooseStarterState.swift in Sources */,
+				BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */,
+				BD6DB4B420BE250400F8ABDE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +552,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BD6DB47F20BDF43C00F8ABDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6DB48820BDF43C00F8ABDE /* ViewController.swift in Sources */,
+				BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49220BDF43D00F8ABDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6DB49B20BDF43D00F8ABDE /* MiniChallenge8iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD6DB49D20BDF43D00F8ABDE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6DB4A620BDF43D00F8ABDE /* MiniChallenge8iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,6 +590,16 @@
 			target = BD6DB45020BDED1B00F8ABDE /* MiniChallenge8 */;
 			targetProxy = BD6DB46E20BDED1E00F8ABDE /* PBXContainerItemProxy */;
 		};
+		BD6DB49820BDF43D00F8ABDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD6DB48220BDF43C00F8ABDE /* MiniChallenge8iOS */;
+			targetProxy = BD6DB49720BDF43D00F8ABDE /* PBXContainerItemProxy */;
+		};
+		BD6DB4A320BDF43D00F8ABDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD6DB48220BDF43C00F8ABDE /* MiniChallenge8iOS */;
+			targetProxy = BD6DB4A220BDF43D00F8ABDE /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -295,6 +609,22 @@
 				BD6DB45920BDED1B00F8ABDE /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD6DB48920BDF43C00F8ABDE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD6DB48A20BDF43C00F8ABDE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD6DB48F20BDF43D00F8ABDE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -417,8 +747,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,8 +768,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
 				INFOPLIST_FILE = MiniChallenge8/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +866,142 @@
 			};
 			name = Release;
 		};
+		BD6DB4A920BDF43D00F8ABDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD6DB4AA20BDF43D00F8ABDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BD6DB4AC20BDF43D00F8ABDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniChallenge8iOS.app/MiniChallenge8iOS";
+			};
+			name = Debug;
+		};
+		BD6DB4AD20BDF43D00F8ABDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MiniChallenge8iOS.app/MiniChallenge8iOS";
+			};
+			name = Release;
+		};
+		BD6DB4AF20BDF43D00F8ABDE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOSUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiniChallenge8iOS;
+			};
+			name = Debug;
+		};
+		BD6DB4B020BDF43D00F8ABDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLLH384AC4;
+				INFOPLIST_FILE = MiniChallenge8iOSUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.mackmobile.Paciulli.MiniChallenge8iOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MiniChallenge8iOS;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -569,6 +1037,33 @@
 			buildConfigurations = (
 				BD6DB47D20BDED1E00F8ABDE /* Debug */,
 				BD6DB47E20BDED1E00F8ABDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD6DB4A820BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6DB4A920BDF43D00F8ABDE /* Debug */,
+				BD6DB4AA20BDF43D00F8ABDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD6DB4AB20BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6DB4AC20BDF43D00F8ABDE /* Debug */,
+				BD6DB4AD20BDF43D00F8ABDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD6DB4AE20BDF43D00F8ABDE /* Build configuration list for PBXNativeTarget "MiniChallenge8iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD6DB4AF20BDF43D00F8ABDE /* Debug */,
+				BD6DB4B020BDF43D00F8ABDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

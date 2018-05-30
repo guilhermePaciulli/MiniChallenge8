@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MiniChallenge8
+//  MiniChallenge8iOS
 //
 //  Created by Guilherme Paciulli on 29/05/18.
 //  Copyright © 2018 Guilherme Paciulli. All rights reserved.
