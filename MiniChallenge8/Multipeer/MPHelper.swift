@@ -33,7 +33,7 @@ class MPHelper: NSObject {
     
     var peerId: MCPeerID?
     
-    private let serviceType = "rapBattlingInvitation123"
+    private let serviceType = "rapbattleinv853"
     
     private var serviceAdvertiser: MCNearbyServiceAdvertiser!
     
@@ -41,6 +41,7 @@ class MPHelper: NSObject {
     
     override init() {
         super.init()
+        self.prepare(name: "rapbattleadver")
     }
     
     func prepare(name: String) {
@@ -121,6 +122,7 @@ extension MPHelper: MCSessionDelegate {
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         DispatchQueue.main.async {
+            print(String.init(data: data, encoding: String.Encoding.utf8)!)
             self.receiverDelegate?.receive(data: data, from: peerID)
         }
     }

@@ -13,7 +13,6 @@
 		BD6DB46720BDED1E00F8ABDE /* MiniChallenge8Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB46620BDED1E00F8ABDE /* MiniChallenge8Tests.swift */; };
 		BD6DB47220BDED1E00F8ABDE /* MiniChallenge8UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB47120BDED1E00F8ABDE /* MiniChallenge8UITests.swift */; };
 		BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */; };
-		BD6DB48820BDF43C00F8ABDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB48720BDF43C00F8ABDE /* ViewController.swift */; };
 		BD6DB48B20BDF43C00F8ABDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48920BDF43C00F8ABDE /* Main.storyboard */; };
 		BD6DB48D20BDF43D00F8ABDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */; };
 		BD6DB49020BDF43D00F8ABDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */; };
@@ -32,6 +31,17 @@
 		BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */; };
 		BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D220BEDEA900F8ABDE /* Player.swift */; };
 		BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */; };
+		BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799C620BEE5DF0081C42F /* Battle.swift */; };
+		BD7799C920BEE64C0081C42F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799C820BEE64C0081C42F /* Round.swift */; };
+		BD7799CB20BEE6550081C42F /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CA20BEE6550081C42F /* Turn.swift */; };
+		BD7799CD20BEE8150081C42F /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CC20BEE8150081C42F /* Championship.swift */; };
+		BD7799CE20BF132C0081C42F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D220BEDEA900F8ABDE /* Player.swift */; };
+		BD7799CF20BF132C0081C42F /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799C620BEE5DF0081C42F /* Battle.swift */; };
+		BD7799D020BF132C0081C42F /* Round.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799C820BEE64C0081C42F /* Round.swift */; };
+		BD7799D120BF132C0081C42F /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CA20BEE6550081C42F /* Turn.swift */; };
+		BD7799D220BF132C0081C42F /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CC20BEE8150081C42F /* Championship.swift */; };
+		BD7799D820BF13A10081C42F /* MPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D720BF13A10081C42F /* MPHelper.swift */; };
+		BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D920BF17560081C42F /* ConnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +89,6 @@
 		BD6DB47320BDED1E00F8ABDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD6DB48320BDF43C00F8ABDE /* MiniChallenge8iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniChallenge8iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD6DB48720BDF43C00F8ABDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD6DB48A20BDF43C00F8ABDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD6DB48F20BDF43D00F8ABDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +112,12 @@
 		BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBattleState.swift; sourceTree = "<group>"; };
 		BD6DB4D220BEDEA900F8ABDE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGameViewController.swift; sourceTree = "<group>"; };
+		BD7799C620BEE5DF0081C42F /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		BD7799C820BEE64C0081C42F /* Round.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Round.swift; sourceTree = "<group>"; };
+		BD7799CA20BEE6550081C42F /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
+		BD7799CC20BEE8150081C42F /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
+		BD7799D720BF13A10081C42F /* MPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHelper.swift; sourceTree = "<group>"; };
+		BD7799D920BF17560081C42F /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,12 +226,10 @@
 		BD6DB48420BDF43C00F8ABDE /* MiniChallenge8iOS */ = {
 			isa = PBXGroup;
 			children = (
-				BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */,
-				BD6DB48720BDF43C00F8ABDE /* ViewController.swift */,
-				BD6DB48920BDF43C00F8ABDE /* Main.storyboard */,
-				BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */,
-				BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */,
-				BD6DB49120BDF43D00F8ABDE /* Info.plist */,
+				BD7799DB20BF175B0081C42F /* ViewControllers */,
+				BD7799D620BF137F0081C42F /* Multipeer */,
+				BD7799D420BF13690081C42F /* Storyboards */,
+				BD7799D320BF13550081C42F /* Misc */,
 			);
 			path = MiniChallenge8iOS;
 			sourceTree = "<group>";
@@ -268,6 +281,10 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB4D220BEDEA900F8ABDE /* Player.swift */,
+				BD7799C620BEE5DF0081C42F /* Battle.swift */,
+				BD7799C820BEE64C0081C42F /* Round.swift */,
+				BD7799CA20BEE6550081C42F /* Turn.swift */,
+				BD7799CC20BEE8150081C42F /* Championship.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +311,41 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD7799D320BF13550081C42F /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB48520BDF43C00F8ABDE /* AppDelegate.swift */,
+				BD6DB48C20BDF43D00F8ABDE /* Assets.xcassets */,
+				BD6DB49120BDF43D00F8ABDE /* Info.plist */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		BD7799D420BF13690081C42F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BD6DB48920BDF43C00F8ABDE /* Main.storyboard */,
+				BD6DB48E20BDF43D00F8ABDE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BD7799D620BF137F0081C42F /* Multipeer */ = {
+			isa = PBXGroup;
+			children = (
+				BD7799D720BF13A10081C42F /* MPHelper.swift */,
+			);
+			path = Multipeer;
+			sourceTree = "<group>";
+		};
+		BD7799DB20BF175B0081C42F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD7799D920BF17560081C42F /* ConnectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -520,18 +572,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */,
+				BD7799CB20BEE6550081C42F /* Turn.swift in Sources */,
 				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
 				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
 				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
 				BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */,
+				BD7799CD20BEE8150081C42F /* Championship.swift in Sources */,
 				BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */,
 				BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */,
 				BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */,
+				BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */,
 				BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */,
 				BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */,
 				BD6DB4BC20BE2B7600F8ABDE /* TimeoutState.swift in Sources */,
 				BD6DB4C920BE361A00F8ABDE /* ChooseStarterState.swift in Sources */,
 				BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */,
+				BD7799C920BEE64C0081C42F /* Round.swift in Sources */,
 				BD6DB4B420BE250400F8ABDE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,8 +612,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD6DB48820BDF43C00F8ABDE /* ViewController.swift in Sources */,
+				BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */,
+				BD7799CE20BF132C0081C42F /* Player.swift in Sources */,
 				BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */,
+				BD7799D020BF132C0081C42F /* Round.swift in Sources */,
+				BD7799D220BF132C0081C42F /* Championship.swift in Sources */,
+				BD7799D120BF132C0081C42F /* Turn.swift in Sources */,
+				BD7799CF20BF132C0081C42F /* Battle.swift in Sources */,
+				BD7799D820BF13A10081C42F /* MPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,7 +935,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLLH384AC4;
-				INFOPLIST_FILE = MiniChallenge8iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8iOS/Misc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -894,7 +956,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VLLH384AC4;
-				INFOPLIST_FILE = MiniChallenge8iOS/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8iOS/Misc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
