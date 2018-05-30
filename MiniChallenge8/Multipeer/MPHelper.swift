@@ -37,7 +37,7 @@ class MPHelper: NSObject {
     
     private var serviceAdvertiser: MCNearbyServiceAdvertiser!
     
-    private let maxNumberOfConnections = 6
+    private let maxNumberOfConnections = 5
     
     override init() {
         super.init()
@@ -57,7 +57,9 @@ class MPHelper: NSObject {
             do {
                 try session.send(data, toPeers: session.connectedPeers, with: dataMode)
             } catch let error {
-                self.receiverDelegate?.receive(error: error)
+                DispatchQueue.main.async {
+                    self.receiverDelegate?.receive(error: error)
+                }
             }
         }
     }
@@ -67,7 +69,9 @@ class MPHelper: NSObject {
         do {
             try session.send(data, toPeers: peers, with: dataMode)
         } catch let error {
-            self.receiverDelegate?.receive(error: error)
+            DispatchQueue.main.async {
+                self.receiverDelegate?.receive(error: error)
+            }
         }
     }
     
@@ -97,11 +101,15 @@ class MPHelper: NSObject {
 extension MPHelper: MCNearbyServiceAdvertiserDelegate {
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didNotStartAdvertisingPeer error: Error) {
-        self.receiverDelegate?.receive(error: error)
+        DispatchQueue.main.async {
+            self.receiverDelegate?.receive(error: error)
+        }
     }
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
-        self.connectionDelegate?.didBeginConnection(to: peerID)
+        DispatchQueue.main.async {
+            self.connectionDelegate?.didBeginConnection(to: peerID)
+        }
         invitationHandler(true, self.session)
     }
     
@@ -110,19 +118,20 @@ extension MPHelper: MCNearbyServiceAdvertiserDelegate {
 extension MPHelper: MCSessionDelegate {
     
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
-        switch state {
-        case .connected:
-            self.connectionDelegate?.didEstablishConnection(with: peerID)
-        case .connecting:
-            self.connectionDelegate?.isConnecting(to: peerID)
-        case .notConnected:
-            self.connectionDelegate?.didLostConnection(with: peerID)
+        DispatchQueue.main.async {
+            switch state {
+            case .connected:
+                self.connectionDelegate?.didEstablishConnection(with: peerID)
+            case .connecting:
+                self.connectionDelegate?.isConnecting(to: peerID)
+            case .notConnected:
+                self.connectionDelegate?.didLostConnection(with: peerID)
+            }
         }
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         DispatchQueue.main.async {
-            print(String.init(data: data, encoding: String.Encoding.utf8)!)
             self.receiverDelegate?.receive(data: data, from: peerID)
         }
     }
@@ -135,7 +144,9 @@ extension MPHelper: MCSessionDelegate {
     
     func session(_ session: MCSession, didFinishReceivingResourceWithName resourceName: String, fromPeer peerID: MCPeerID, at localURL: URL?, withError error: Error?) {
         guard let e = error else { return }
-        self.receiverDelegate?.receive(error: e)
+        DispatchQueue.main.async {
+            self.receiverDelegate?.receive(error: e)
+        }
     }
     
 }

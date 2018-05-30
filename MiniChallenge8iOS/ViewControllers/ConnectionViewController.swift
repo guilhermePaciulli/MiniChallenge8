@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-class ConnectionViewController: UIViewController, ConnectionDelegate {
+class ConnectionViewController: UIViewController, ConnectionDelegate, ReceiverDelegate {
 
     @IBOutlet weak var testingLabel: UILabel!
     
@@ -17,8 +17,9 @@ class ConnectionViewController: UIViewController, ConnectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MPHelper.shared.startBrowsing()
         MPHelper.shared.connectionDelegate = self
+        MPHelper.shared.receiverDelegate = self
+        MPHelper.shared.startBrowsing()
         
         self.sendButton.isHidden = true
         self.sendButton.isEnabled = false
@@ -45,7 +46,23 @@ class ConnectionViewController: UIViewController, ConnectionDelegate {
     }
 
     @IBAction func didPressSendButton(_ sender: Any) {
-        let datum = "Capivaras sao demais".data(using: .utf8)!
-        MPHelper.shared.send(data: datum, dataMode: .reliable)
+        let playerStruct = PlayerStruct.init(name: "MC Capivara", avatar: .rabbit)
+        do {
+            let datum = try JSONEncoder().encode(playerStruct)
+            MPHelper.shared.send(data: datum, dataMode: .reliable)
+        } catch { }
     }
+    
+    func receive(data: Data, from peer: MCPeerID) {
+        do {
+            let changeScreen = try JSONDecoder().decode(DisplayScreen.self, from: data)
+            if changeScreen.screen == .waiting {
+                let alert = UIAlertController.init(title: "Wating", message: nil, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in }))
+                self.present(alert, animated: true, completion: {})
+            }
+        } catch { }
+    }
+    
+    func receive(error: Error) { }
 }

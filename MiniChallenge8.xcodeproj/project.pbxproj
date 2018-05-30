@@ -42,6 +42,8 @@
 		BD7799D220BF132C0081C42F /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CC20BEE8150081C42F /* Championship.swift */; };
 		BD7799D820BF13A10081C42F /* MPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D720BF13A10081C42F /* MPHelper.swift */; };
 		BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D920BF17560081C42F /* ConnectionViewController.swift */; };
+		BD7799DC20BF28EC0081C42F /* MPServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B520BE28F600F8ABDE /* MPServices.swift */; };
+		BD7799DE20BF2C430081C42F /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +120,7 @@
 		BD7799CC20BEE8150081C42F /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
 		BD7799D720BF13A10081C42F /* MPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHelper.swift; sourceTree = "<group>"; };
 		BD7799D920BF17560081C42F /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */,
+				BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -577,6 +581,7 @@
 				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
 				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
 				BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */,
+				BD7799DE20BF2C430081C42F /* ConnectionViewController.swift in Sources */,
 				BD7799CD20BEE8150081C42F /* Championship.swift in Sources */,
 				BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */,
 				BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */,
@@ -613,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */,
+				BD7799DC20BF28EC0081C42F /* MPServices.swift in Sources */,
 				BD7799CE20BF132C0081C42F /* Player.swift in Sources */,
 				BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */,
 				BD7799D020BF132C0081C42F /* Round.swift in Sources */,

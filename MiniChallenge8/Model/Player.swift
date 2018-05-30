@@ -26,6 +26,6 @@ class Player {
     
 }
 
-enum Avatar: String {
+enum Avatar: String, Codable {
     case rabbit = "rabbit.jpg"
 }
