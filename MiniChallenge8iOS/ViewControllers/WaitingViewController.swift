@@ -12,11 +12,14 @@ class WaitingViewController: UIViewController {
     
     @IBOutlet weak var waitingLabel: UILabel!
     var control:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
-         
+            
             switch self.control{
             case 0:
                 self.waitingLabel.text = "aguardando"
@@ -30,7 +33,7 @@ class WaitingViewController: UIViewController {
             case 3:
                 self.waitingLabel.text = "aguardando . . ."
                 self.control = 0
-           default:
+            default:
                 break
             }
         }

@@ -50,6 +50,8 @@
 		BD7799E420BF42380081C42F /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E220BF42380081C42F /* WaitingViewController.swift */; };
 		BD7799E620BF45100081C42F /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E520BF45100081C42F /* ReactionViewController.swift */; };
 		BD7799E820BF45850081C42F /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E720BF45850081C42F /* PreBattleViewController.swift */; };
+		EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */; };
+		EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		BD7799E220BF42380081C42F /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 		BD7799E520BF45100081C42F /* ReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
 		BD7799E720BF45850081C42F /* PreBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBattleViewController.swift; sourceTree = "<group>"; };
+		EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
+		EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 		BD6DB48420BDF43C00F8ABDE /* MiniChallenge8iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EC75AE9320C17EE70074E435 /* Models */,
 				BD7799DB20BF175B0081C42F /* ViewControllers */,
 				BD7799D620BF137F0081C42F /* Multipeer */,
 				BD7799D420BF13690081C42F /* Storyboards */,
@@ -364,8 +369,17 @@
 				BD7799E220BF42380081C42F /* WaitingViewController.swift */,
 				BD7799E520BF45100081C42F /* ReactionViewController.swift */,
 				BD7799E720BF45850081C42F /* PreBattleViewController.swift */,
+				EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EC75AE9320C17EE70074E435 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -637,8 +651,10 @@
 				BD7799E420BF42380081C42F /* WaitingViewController.swift in Sources */,
 				BD7799E620BF45100081C42F /* ReactionViewController.swift in Sources */,
 				BD7799E820BF45850081C42F /* PreBattleViewController.swift in Sources */,
+				EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */,
 				BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */,
 				BD7799DC20BF28EC0081C42F /* MPServices.swift in Sources */,
+				EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */,
 				BD7799CE20BF132C0081C42F /* Player.swift in Sources */,
 				BD6DB48620BDF43C00F8ABDE /* AppDelegate.swift in Sources */,
 				BD7799D020BF132C0081C42F /* Round.swift in Sources */,
