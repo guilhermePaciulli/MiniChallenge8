@@ -11,7 +11,7 @@ import UIKit
 class CharacterCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var characterView: UIImageView!
-    
+    @IBOutlet weak var check: UIImageView!
     
     
 }

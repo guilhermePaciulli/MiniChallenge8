@@ -46,21 +46,27 @@ class ChooseCharacterViewController: UIViewController,UICollectionViewDataSource
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CharacterCollectionViewCell
         cell.characterView.image = characters[indexPath.row]
-        
+        cell.check.isHidden = true
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        for c in collectionView.visibleCells{
+            if let x = c as? CharacterCollectionViewCell{
+                x.check.isHidden = true
+            }
+        }
+        
         self.selectedCharacter = characters[indexPath.row]
         
-        let cell = collectionView.cellForItem(at: indexPath)
-        
+        if let cell = collectionView.cellForItem(at: indexPath) as? CharacterCollectionViewCell{
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [],animations: {
-                        cell!.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)},completion: { finished in
+            cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)},completion: { finished in
                         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5,options: .curveEaseOut,animations: {
-                        cell!.transform = CGAffineTransform(scaleX: 1, y: 1)
-                        },completion: nil)})
+                        cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+                            cell.check.isHidden = false
+                        },completion: nil)})}
         
     }
     

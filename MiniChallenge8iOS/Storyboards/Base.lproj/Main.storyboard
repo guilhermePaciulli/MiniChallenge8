@@ -219,6 +219,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-Li-ZFq">
                                                     <rect key="frame" x="0.0" y="0.0" width="123" height="126"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="uPm-eV-6ZE">
+                                                    <rect key="frame" x="102" y="0.0" width="21" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -229,6 +233,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="characterView" destination="9ov-Li-ZFq" id="F0L-DB-Ki0"/>
+                                            <outlet property="check" destination="uPm-eV-6ZE" id="kNZ-37-WnI"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -304,6 +309,7 @@
     <resources>
         <image name="Reaction" width="375" height="812"/>
         <image name="characterPlaceholder" width="143" height="153"/>
+        <image name="check" width="28" height="22"/>
         <image name="moneyReactionButton" width="202" height="202"/>
         <image name="reactionScreen" width="375" height="812"/>
         <image name="waitingScreenBackground" width="375" height="812"/>
