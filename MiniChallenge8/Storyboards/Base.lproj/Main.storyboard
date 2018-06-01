@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0em-89-gFv">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WLS-SI-AZt">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -103,7 +103,7 @@
                                     <color key="titleColor" red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use your phone app to enter the party!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qfR-pN-1FO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use o app no iPhone para entrar !" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qfR-pN-1FO">
                                 <rect key="frame" x="192" y="891" width="1536" height="76"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="38"/>
                                 <color key="textColor" red="1" green="0.83921568629999999" blue="0.39652104329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -132,11 +132,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IET-HF-x7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="1297"/>
+            <point key="canvasLocation" x="76" y="1207"/>
+        </scene>
+        <!--Pre Battle View Controller-->
+        <scene sceneID="ohO-w5-pa7">
+            <objects>
+                <viewController id="WLS-SI-AZt" customClass="PreBattleViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I5l-fi-hKP"/>
+                        <viewControllerLayoutGuide type="bottom" id="nFr-pH-AWN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t0w-bx-psI">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pre Battle" translatesAutoresizingMaskIntoConstraints="NO" id="HvC-rr-NS7">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wB7-qU-sw2">
+                                <rect key="frame" x="1450" y="908" width="322" height="76"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wB7-qU-sw2" secondAttribute="height" multiplier="195:46" id="qw6-DO-Qjf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="40"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Batalhar" backgroundImage="Button">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressBattleBuuton:" destination="WLS-SI-AZt" eventType="primaryActionTriggered" id="skZ-9K-Wcq"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper5" translatesAutoresizingMaskIntoConstraints="NO" id="SCx-63-0cH">
+                                <rect key="frame" x="250" y="273" width="296" height="296"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SCx-63-0cH" secondAttribute="height" multiplier="1:1" id="era-UN-mUb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="9U6-4i-fhx">
+                                <rect key="frame" x="1343" y="284" width="296" height="296"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9U6-4i-fhx" firstAttribute="height" secondItem="SCx-63-0cH" secondAttribute="height" id="4zD-Bg-lsm"/>
+                            <constraint firstItem="nFr-pH-AWN" firstAttribute="top" secondItem="SCx-63-0cH" secondAttribute="bottom" constant="451" id="8SV-me-934"/>
+                            <constraint firstItem="SCx-63-0cH" firstAttribute="leading" secondItem="JHi-Ug-gCi" secondAttribute="leading" constant="160" id="AGh-7L-4tq"/>
+                            <constraint firstItem="JHi-Ug-gCi" firstAttribute="trailing" secondItem="wB7-qU-sw2" secondAttribute="trailing" constant="58" id="CJa-yz-nLl"/>
+                            <constraint firstItem="wB7-qU-sw2" firstAttribute="top" secondItem="HvC-rr-NS7" secondAttribute="bottom" constant="-172" id="Dpx-PW-jmX"/>
+                            <constraint firstItem="HvC-rr-NS7" firstAttribute="top" secondItem="t0w-bx-psI" secondAttribute="top" id="Mrc-bl-rxE"/>
+                            <constraint firstItem="wB7-qU-sw2" firstAttribute="height" secondItem="HvC-rr-NS7" secondAttribute="height" multiplier="0.07" id="SaV-68-INa"/>
+                            <constraint firstAttribute="trailing" secondItem="HvC-rr-NS7" secondAttribute="trailing" id="UcS-Fe-Dco"/>
+                            <constraint firstAttribute="bottom" secondItem="HvC-rr-NS7" secondAttribute="bottom" id="eiY-Jm-o40"/>
+                            <constraint firstItem="SCx-63-0cH" firstAttribute="top" secondItem="I5l-fi-hKP" secondAttribute="bottom" constant="213" id="gvk-Td-Lbc"/>
+                            <constraint firstItem="JHi-Ug-gCi" firstAttribute="trailing" secondItem="9U6-4i-fhx" secondAttribute="trailing" constant="191" id="iqE-Co-7bx"/>
+                            <constraint firstItem="9U6-4i-fhx" firstAttribute="width" secondItem="SCx-63-0cH" secondAttribute="width" id="sgu-YK-2kS"/>
+                            <constraint firstItem="HvC-rr-NS7" firstAttribute="leading" secondItem="t0w-bx-psI" secondAttribute="leading" id="tYT-HA-XFd"/>
+                            <constraint firstItem="9U6-4i-fhx" firstAttribute="top" secondItem="I5l-fi-hKP" secondAttribute="bottom" constant="224" id="xqJ-Qw-ijI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JHi-Ug-gCi"/>
+                    </view>
+                    <connections>
+                        <outlet property="player1ImageView" destination="SCx-63-0cH" id="W6E-G9-yqA"/>
+                        <outlet property="player2ImageView" destination="9U6-4i-fhx" id="8O1-TJ-Nt8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zes-3S-0Iz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="1207"/>
         </scene>
     </scenes>
     <resources>
         <image name="Button" width="390" height="92"/>
+        <image name="Pre Battle" width="1920" height="1080"/>
         <image name="homeScreen" width="1920" height="1080"/>
+        <image name="rapper4" width="227" height="227"/>
+        <image name="rapper5" width="227" height="227"/>
     </resources>
 </document>
