@@ -50,6 +50,10 @@
 		BD7799E420BF42380081C42F /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E220BF42380081C42F /* WaitingViewController.swift */; };
 		BD7799E620BF45100081C42F /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E520BF45100081C42F /* ReactionViewController.swift */; };
 		BD7799E820BF45850081C42F /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E720BF45850081C42F /* PreBattleViewController.swift */; };
+		BD7799EC20C1D7600081C42F /* ConnectedPlayersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799EB20C1D7600081C42F /* ConnectedPlayersCollectionViewController.swift */; };
+		BD91F25920C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */; };
+		BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */; };
+		BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */; };
 		EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */; };
 		EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */; };
 		ECB25EE020C1A32B00F0333D /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */; };
@@ -134,6 +138,10 @@
 		BD7799E220BF42380081C42F /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
 		BD7799E520BF45100081C42F /* ReactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionViewController.swift; sourceTree = "<group>"; };
 		BD7799E720BF45850081C42F /* PreBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBattleViewController.swift; sourceTree = "<group>"; };
+		BD7799EB20C1D7600081C42F /* ConnectedPlayersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersCollectionViewController.swift; sourceTree = "<group>"; };
+		BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedPlayersCellView.xib; sourceTree = "<group>"; };
+		BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersView.swift; sourceTree = "<group>"; };
 		EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
 		EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBattleViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB45820BDED1B00F8ABDE /* Main.storyboard */,
+				BD91F25F20C2F328004E28D8 /* Custom Views */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -333,6 +342,7 @@
 				BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */,
 				BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */,
 				ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */,
+				BD91F25A20C2DF25004E28D8 /* ConnectedPlayersView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,6 +385,24 @@
 				EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BD91F25A20C2DF25004E28D8 /* ConnectedPlayersView */ = {
+			isa = PBXGroup;
+			children = (
+				BD7799EB20C1D7600081C42F /* ConnectedPlayersCollectionViewController.swift */,
+				BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */,
+			);
+			path = ConnectedPlayersView;
+			sourceTree = "<group>";
+		};
+		BD91F25F20C2F328004E28D8 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */,
+				BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */,
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 		EC75AE9320C17EE70074E435 /* Models */ = {
@@ -559,6 +587,7 @@
 				BD7799E020BF419B0081C42F /* pricedown bl.ttf in Resources */,
 				BD6DB45C20BDED1E00F8ABDE /* Assets.xcassets in Resources */,
 				BD6DB45A20BDED1B00F8ABDE /* Main.storyboard in Resources */,
+				BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +648,7 @@
 				BD7799CD20BEE8150081C42F /* Championship.swift in Sources */,
 				BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */,
 				BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */,
+				BD7799EC20C1D7600081C42F /* ConnectedPlayersCollectionViewController.swift in Sources */,
 				ECB25EE020C1A32B00F0333D /* PreBattleViewController.swift in Sources */,
 				BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */,
 				BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */,
@@ -626,9 +656,11 @@
 				BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */,
 				BD6DB4BC20BE2B7600F8ABDE /* TimeoutState.swift in Sources */,
 				BD6DB4C920BE361A00F8ABDE /* ChooseStarterState.swift in Sources */,
+				BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */,
 				BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */,
 				BD7799C920BEE64C0081C42F /* Round.swift in Sources */,
 				BD6DB4B420BE250400F8ABDE /* State.swift in Sources */,
+				BD91F25920C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

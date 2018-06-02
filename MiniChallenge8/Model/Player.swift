@@ -27,5 +27,9 @@ class Player {
 }
 
 enum Avatar: String, Codable {
-    case rabbit = "rabbit.jpg"
+    case rapper1 = "rapper1.png"
+    case rapper2 = "rapper2.png"
+    case rapper3 = "rapper3.png"
+    case rapper4 = "rapper4.png"
+    case rapper5 = "rapper5.png"
 }
