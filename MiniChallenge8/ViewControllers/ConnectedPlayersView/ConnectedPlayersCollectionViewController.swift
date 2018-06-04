@@ -36,6 +36,8 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        MPHelper.shared.connectionDelegate = nil
+        MPHelper.shared.receiverDelegate = nil
         MPHelper.shared.stopAdvertising()
     }
     
@@ -109,6 +111,7 @@ extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
     
     func didLostConnection(with peerID: MCPeerID) {
         self.connectedPlayers = self.connectedPlayers.filter({ $0.peerID != peerID })
+        self.collectionView?.reloadData()
     }
     
 }

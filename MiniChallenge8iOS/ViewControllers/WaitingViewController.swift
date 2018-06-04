@@ -43,10 +43,17 @@ class WaitingViewController: UIViewController {
             }
         }
         self.waitingLabel.textColor = UIColor.init(red: 1, green: 214/255, blue: 81/255, alpha: 1)
-        var inputTextWaitingLabel = "aguardando"
+        self.inputTextWaitingLabel = "aguardando"
 
         self.isConnected = MPHelper.shared.session == nil
         self.multipeerSetUp()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        MPHelper.shared.receiverDelegate = nil
+        MPHelper.shared.connectionDelegate = nil
+        MPHelper.shared.stopBrowsing()
     }
     
     func multipeerSetUp() {

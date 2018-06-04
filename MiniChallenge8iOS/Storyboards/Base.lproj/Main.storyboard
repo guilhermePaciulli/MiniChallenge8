@@ -130,7 +130,7 @@
         <!--Choose Character View Controller-->
         <scene sceneID="isE-Ni-Xnj">
             <objects>
-                <viewController storyboardIdentifier="chooseCharacterViewController" modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="erj-D9-s50" customClass="ChooseCharacterViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseCharacterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="erj-D9-s50" customClass="ChooseCharacterViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CHN-Qo-4MW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +171,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="126"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="characterPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-Li-ZFq">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper1" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-Li-ZFq">
                                                     <rect key="frame" x="0.0" y="0.0" width="123" height="126"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="uPm-eV-6ZE">
@@ -210,6 +210,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PK-ef-UPa">
                                 <rect key="frame" x="139.5" y="524" width="96" height="54"/>
                                 <color key="backgroundColor" red="0.99215686274509807" green="0.83137254901960789" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0PK-ef-UPa" secondAttribute="height" multiplier="16:9" id="IWw-re-2ou"/>
                                 </constraints>
@@ -218,7 +219,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didPressConfirmButton:" destination="erj-D9-s50" eventType="touchUpInside" id="FYh-DT-Oi8"/>
+                                    <action selector="didPressConfirmButton:" destination="erj-D9-s50" eventType="touchUpInside" id="Etm-aW-FeX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -252,7 +253,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="oAw-Ub-YUi" id="KIY-3z-syg"/>
-                        <outlet property="confirmButton" destination="0PK-ef-UPa" id="CGW-w4-pT5"/>
+                        <outlet property="confirmButton" destination="0PK-ef-UPa" id="DcR-Mx-92W"/>
                         <outlet property="nameTextField" destination="JBe-vx-7o2" id="gTn-Ss-Rgz"/>
                     </connections>
                 </viewController>
@@ -263,9 +264,9 @@
     </scenes>
     <resources>
         <image name="Reaction" width="375" height="812"/>
-        <image name="characterPlaceholder" width="143" height="153"/>
         <image name="check" width="28" height="22"/>
         <image name="moneyReactionButton" width="202" height="202"/>
+        <image name="rapper1" width="227" height="227"/>
         <image name="reactionScreen" width="375" height="812"/>
         <image name="waitingScreenBackground" width="375" height="812"/>
     </resources>

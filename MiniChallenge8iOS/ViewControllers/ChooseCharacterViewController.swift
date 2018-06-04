@@ -23,8 +23,6 @@ class ChooseCharacterViewController: UIViewController, UICollectionViewDataSourc
                                                AvatarOptions.init(avatar: .rapper4, image: UIImage.init(named: "rapper4.png")!),
                                                AvatarOptions.init(avatar: .rapper5, image: UIImage.init(named: "rapper5.png")!)]
     
-    var control = true
-    
     var selectedCharacter: Avatar = .rapper1
     
     override func viewDidLoad() {
@@ -42,6 +40,12 @@ class ChooseCharacterViewController: UIViewController, UICollectionViewDataSourc
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         MPHelper.shared.receiverDelegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        MPHelper.shared.receiverDelegate = nil
+        MPHelper.shared.connectionDelegate = nil
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,20 +67,21 @@ class ChooseCharacterViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         for c in collectionView.visibleCells{
-            if let x = c as? CharacterCollectionViewCell{
+            if let x = c as? CharacterCollectionViewCell {
                 x.check.isHidden = true
             }
         }
         
         self.selectedCharacter = characters[indexPath.row].avatar
         
-        if let cell = collectionView.cellForItem(at: indexPath) as? CharacterCollectionViewCell{
+        if let cell = collectionView.cellForItem(at: indexPath) as? CharacterCollectionViewCell {
         UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5, options: [],animations: {
             cell.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)},completion: { finished in
-                        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5,options: .curveEaseOut,animations: {
-                        cell.transform = CGAffineTransform(scaleX: 1, y: 1)
-                            cell.check.isHidden = false
-                        },completion: nil)})}
+                UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 5,options: .curveEaseOut, animations: {
+                    cell.transform = CGAffineTransform(scaleX: 1, y: 1)
+                    cell.check.isHidden = false
+                },completion: nil)})
+        }
         
     }
     
@@ -118,8 +123,8 @@ extension ChooseCharacterViewController: ReceiverDelegate {
         if let screenToBeDisplayed = try? JSONDecoder().decode(DisplayScreen.self, from: data) {
             switch screenToBeDisplayed.screen {
             case .waiting:
-                if let chooseCharacterViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
-                    self.present(chooseCharacterViewController, animated: true, completion: nil)
+                if let waitingViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
+                    self.present(waitingViewController, animated: true, completion: nil)
                 }
             case .characterEditing:
                 break
