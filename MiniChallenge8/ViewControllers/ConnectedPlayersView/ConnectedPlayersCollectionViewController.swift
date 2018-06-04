@@ -28,7 +28,7 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         MPHelper.shared.connectionDelegate = self
         MPHelper.shared.startAdvertesing()
         
-        let appleTVPlayer = Player.init(name: "MC AppleTV",
+        let appleTVPlayer = Player.init(name: "mc t-vos",
                                         avatar: Avatar(rawValue: "rapper\((arc4random_uniform(5) + 1)).png")!,
                                         peerID: MCPeerID.init(displayName: "Hey"))
         self.connectedPlayers.append(appleTVPlayer)
@@ -54,12 +54,15 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? ConnectedPlayersCollectionViewCell else {
             return UICollectionViewCell()
         }
-        let cellPlayer = self.connectedPlayers[indexPath.row]
+        if let innerView = cell.innerView { innerView.removeFromSuperview() }
         cell.innerView = UINib.init(nibName: "ConnectedPlayersCellView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ConnectedPlayersView
         cell.innerView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: cell.frame.size)
         cell.addSubview(cell.innerView)
+        
+        let cellPlayer = self.connectedPlayers[indexPath.row]
         cell.innerView.rapperName.text = cellPlayer.name
         cell.innerView.rapperImage.image = cellPlayer.avatar
+        
         return cell
     }
     
