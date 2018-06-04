@@ -9,16 +9,20 @@
 import UIKit
 import MultipeerConnectivity
 
-class ConnectedPlayersCollectionViewController: UICollectionViewController {
+class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let reuseIdentifier = "connectedPlayersCollectionViewCell"
     
     var connectedPlayers: [Player] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.collectionView!.register(ConnectedPlayersCollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
         self.collectionView?.delegate = self
+        self.collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,16 +45,16 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         MPHelper.shared.stopAdvertising()
     }
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.connectedPlayers.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? ConnectedPlayersCollectionViewCell else {
             return UICollectionViewCell()
         }
@@ -58,17 +62,17 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         cell.innerView = UINib.init(nibName: "ConnectedPlayersCellView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ConnectedPlayersView
         cell.innerView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: cell.frame.size)
         cell.addSubview(cell.innerView)
-        
+
         let cellPlayer = self.connectedPlayers[indexPath.row]
         cell.innerView.rapperName.text = cellPlayer.name
         cell.innerView.rapperImage.image = cellPlayer.avatar
-        
+
         return cell
     }
     
 }
 
-extension ConnectedPlayersCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension ConnectedPlayersViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout,
@@ -95,7 +99,7 @@ extension ConnectedPlayersCollectionViewController: UICollectionViewDelegateFlow
     }
 }
 
-extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
+extension ConnectedPlayersViewController: ConnectionDelegate {
     
     func didBeginConnection(to peerID: MCPeerID) {}
     
@@ -119,7 +123,7 @@ extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
     
 }
 
-extension ConnectedPlayersCollectionViewController: ReceiverDelegate {
+extension ConnectedPlayersViewController: ReceiverDelegate {
     
     func receive(data: Data, from peer: MCPeerID) {
         if let playerDataAdded = self.connectedPlayers.filter({ $0.peerID == peer }).first,
