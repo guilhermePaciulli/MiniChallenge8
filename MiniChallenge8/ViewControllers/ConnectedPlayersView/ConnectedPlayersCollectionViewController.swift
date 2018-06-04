@@ -13,14 +13,30 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
     
     let reuseIdentifier = "connectedPlayersCollectionViewCell"
     
-    var connectedPlayers: [Player] = [Player.init(name: "MC Capivara", avatar: .rapper1, peerID: MCPeerID.init(displayName: "whatever")),
-                                      Player.init(name: "Erickonha", avatar: .rapper2, peerID: MCPeerID.init(displayName: "whatever")),
-                                      Player.init(name: "Bruno the monge", avatar: .rapper3, peerID: MCPeerID.init(displayName: "whatever")),]
+    var connectedPlayers: [Player] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView!.register(ConnectedPlayersCollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
         self.collectionView?.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        MPHelper.shared.receiverDelegate = self
+        MPHelper.shared.connectionDelegate = self
+        MPHelper.shared.startAdvertesing()
+        
+        let appleTVPlayer = Player.init(name: "MC AppleTV",
+                                        avatar: Avatar(rawValue: "rapper\((arc4random_uniform(5) + 1)).png")!,
+                                        peerID: MCPeerID.init(displayName: "Hey"))
+        self.connectedPlayers.append(appleTVPlayer)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        MPHelper.shared.stopAdvertising()
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -72,4 +88,45 @@ extension ConnectedPlayersCollectionViewController: UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: self.view.frame.size.width / 7, height: self.view.frame.size.width / 7)
     }
+}
+
+extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
+    
+    func didBeginConnection(to peerID: MCPeerID) {}
+    
+    func isConnecting(to peerID: MCPeerID) {}
+    
+    func didEstablishConnection(with peerID: MCPeerID) {
+        let notDefinedPlayer = Player(name: "conectando", avatar: .notDefined, peerID: peerID)
+        self.connectedPlayers.append(notDefinedPlayer)
+        
+        if let editCharData = try? JSONEncoder().encode(DisplayScreen(screen: .characterEditing)) {
+            MPHelper.shared.send(data: editCharData, dataMode: .reliable, for: [peerID])
+        }
+        
+        self.collectionView?.reloadData()
+    }
+    
+    func didLostConnection(with peerID: MCPeerID) {
+        self.connectedPlayers = self.connectedPlayers.filter({ $0.peerID != peerID })
+    }
+    
+}
+
+extension ConnectedPlayersCollectionViewController: ReceiverDelegate {
+    
+    func receive(data: Data, from peer: MCPeerID) {
+        if let playerDataAdded = self.connectedPlayers.filter({ $0.peerID == peer }).first,
+           let playerData = try? JSONDecoder().decode(PlayerStruct.self, from: data),
+           let waitScreenData = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
+            
+            playerDataAdded.name = playerData.name
+            playerDataAdded.setAvatar(avatar: playerData.avatar)
+            MPHelper.shared.send(data: waitScreenData, dataMode: .reliable, for: [peer])
+            self.collectionView?.reloadData()
+        }
+    }
+    
+    func receive(error: Error) { }
+    
 }

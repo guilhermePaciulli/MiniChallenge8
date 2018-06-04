@@ -41,12 +41,10 @@
 		BD7799D120BF132C0081C42F /* Turn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CA20BEE6550081C42F /* Turn.swift */; };
 		BD7799D220BF132C0081C42F /* Championship.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799CC20BEE8150081C42F /* Championship.swift */; };
 		BD7799D820BF13A10081C42F /* MPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D720BF13A10081C42F /* MPHelper.swift */; };
-		BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799D920BF17560081C42F /* ConnectionViewController.swift */; };
 		BD7799DC20BF28EC0081C42F /* MPServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B520BE28F600F8ABDE /* MPServices.swift */; };
 		BD7799DE20BF2C430081C42F /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */; };
 		BD7799E020BF419B0081C42F /* pricedown bl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7799DF20BF419B0081C42F /* pricedown bl.ttf */; };
 		BD7799E120BF419B0081C42F /* pricedown bl.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BD7799DF20BF419B0081C42F /* pricedown bl.ttf */; };
-		BD7799E320BF42380081C42F /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E220BF42380081C42F /* WaitingViewController.swift */; };
 		BD7799E420BF42380081C42F /* WaitingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E220BF42380081C42F /* WaitingViewController.swift */; };
 		BD7799E620BF45100081C42F /* ReactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E520BF45100081C42F /* ReactionViewController.swift */; };
 		BD7799E820BF45850081C42F /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799E720BF45850081C42F /* PreBattleViewController.swift */; };
@@ -132,7 +130,6 @@
 		BD7799CA20BEE6550081C42F /* Turn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Turn.swift; sourceTree = "<group>"; };
 		BD7799CC20BEE8150081C42F /* Championship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Championship.swift; sourceTree = "<group>"; };
 		BD7799D720BF13A10081C42F /* MPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHelper.swift; sourceTree = "<group>"; };
-		BD7799D920BF17560081C42F /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		BD7799DF20BF419B0081C42F /* pricedown bl.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pricedown bl.ttf"; sourceTree = "<group>"; };
 		BD7799E220BF42380081C42F /* WaitingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingViewController.swift; sourceTree = "<group>"; };
@@ -378,7 +375,6 @@
 		BD7799DB20BF175B0081C42F /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD7799D920BF17560081C42F /* ConnectionViewController.swift */,
 				BD7799E220BF42380081C42F /* WaitingViewController.swift */,
 				BD7799E520BF45100081C42F /* ReactionViewController.swift */,
 				BD7799E720BF45850081C42F /* PreBattleViewController.swift */,
@@ -637,7 +633,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD7799E320BF42380081C42F /* WaitingViewController.swift in Sources */,
 				BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */,
 				BD7799CB20BEE6550081C42F /* Turn.swift in Sources */,
 				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
@@ -688,7 +683,6 @@
 				BD7799E620BF45100081C42F /* ReactionViewController.swift in Sources */,
 				BD7799E820BF45850081C42F /* PreBattleViewController.swift in Sources */,
 				EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */,
-				BD7799DA20BF17560081C42F /* ConnectionViewController.swift in Sources */,
 				BD7799DC20BF28EC0081C42F /* MPServices.swift in Sources */,
 				EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */,
 				BD7799CE20BF132C0081C42F /* Player.swift in Sources */,

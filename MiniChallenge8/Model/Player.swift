@@ -12,16 +12,20 @@ import MultipeerConnectivity
 
 class Player {
     
-    let name: String
+    var name: String
     
-    let avatar: UIImage
+    var avatar: UIImage
     
-    let peerID: MCPeerID
+    var peerID: MCPeerID
     
     init(name: String, avatar: Avatar, peerID: MCPeerID) {
         self.name = name
         self.avatar = UIImage(named: avatar.rawValue)!
         self.peerID = peerID
+    }
+    
+    func setAvatar(avatar: Avatar) {
+        self.avatar = UIImage(named: avatar.rawValue)!
     }
     
 }
@@ -32,4 +36,6 @@ enum Avatar: String, Codable {
     case rapper3 = "rapper3.png"
     case rapper4 = "rapper4.png"
     case rapper5 = "rapper5.png"
+    
+    case notDefined = "unknown-user.png"
 }

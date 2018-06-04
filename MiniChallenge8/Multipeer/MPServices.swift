@@ -20,8 +20,8 @@ class PlayerStruct: Codable {
         self.avatar = avatar
     }
     
-    func buildPlayer(with peerID: MCPeerID) -> Player {
-        return Player(name: self.name, avatar: self.avatar, peerID: peerID)
+    convenience init(name: String, avatar: String) {
+        self.init(name: name, avatar: Avatar.init(rawValue: avatar)!)
     }
     
 }
@@ -46,6 +46,7 @@ class DisplayScreen: Codable {
 
 enum Screen: String, Codable {
     case waiting = "waitingScreen"
+    case characterEditing = "characterEditingScreen"
 }
 
 enum Starter: String, Codable {
