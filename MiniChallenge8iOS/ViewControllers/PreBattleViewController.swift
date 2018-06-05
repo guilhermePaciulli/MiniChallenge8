@@ -9,13 +9,6 @@
 import UIKit
 
 class PreBattleViewController: UIViewController {
-    
-    
-    @IBOutlet weak var player2ImgView: UIImageView!
-    @IBOutlet weak var player1ImgView: UIImageView!
-    @IBOutlet weak var player1Label: UILabel!
-    @IBOutlet weak var player2Label: UILabel!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()

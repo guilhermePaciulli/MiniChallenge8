@@ -13,9 +13,15 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var instructionsLabel: UILabel!
+    
     let reuseIdentifier = "connectedPlayersCollectionViewCell"
     
     var connectedPlayers: [Player] = []
+    
+    let minimumPlayers = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
                                         avatar: Avatar(rawValue: "rapper\((arc4random_uniform(5) + 1)).png")!,
                                         peerID: MCPeerID.init(displayName: "Hey"))
         self.connectedPlayers.append(appleTVPlayer)
+        self.updateStartButton()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -70,6 +77,27 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
         return cell
     }
     
+    @IBAction func didPressStart(_ sender: Any) {
+        if self.connectedPlayers.count >= self.minimumPlayers {
+            if let preBattleViewController = self.storyboard?.instantiateViewController(withIdentifier: "preBattleViewController") as? PreBattleViewControllerTVOS {
+                preBattleViewController.championship = Championship(players: self.connectedPlayers)
+                self.present(preBattleViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func updateStartButton() {
+        if self.connectedPlayers.count < self.minimumPlayers {
+            self.instructionsLabel.text = "use o app no iphone para entrar - mínimo são 3 jogadores"
+            self.startButton.isEnabled = false
+        } else if self.connectedPlayers.count <= 6 {
+            self.instructionsLabel.text = "use o app no iphone para entrar"
+            self.startButton.isEnabled = true
+        } else {
+            self.instructionsLabel.text = "pressione o botão do controle para começar"
+            self.startButton.isEnabled = true
+        }
+    }
 }
 
 extension ConnectedPlayersViewController: UICollectionViewDelegateFlowLayout {
@@ -119,6 +147,7 @@ extension ConnectedPlayersViewController: ConnectionDelegate {
     func didLostConnection(with peerID: MCPeerID) {
         self.connectedPlayers = self.connectedPlayers.filter({ $0.peerID != peerID })
         self.collectionView?.reloadData()
+        self.updateStartButton()
     }
     
 }
@@ -134,6 +163,7 @@ extension ConnectedPlayersViewController: ReceiverDelegate {
             playerDataAdded.setAvatar(avatar: playerData.avatar)
             MPHelper.shared.send(data: waitScreenData, dataMode: .reliable, for: [peer])
             self.collectionView?.reloadData()
+            self.updateStartButton()
         }
     }
     

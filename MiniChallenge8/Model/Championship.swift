@@ -12,6 +12,8 @@ class Championship {
     
     var battles: [Battle] = []
     
+    var battleIndex: Int = -1
+    
     init(players: [Player]) {
         for p1 in players {
             var added: [Player] = []
@@ -22,6 +24,11 @@ class Championship {
                 }
             }
         }
+    }
+    
+    func nextBattle() -> Battle {
+        self.battleIndex += 1
+        return self.battles[self.battleIndex + 1]
     }
     
 }

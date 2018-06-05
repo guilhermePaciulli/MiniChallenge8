@@ -51,9 +51,9 @@
 		BD91F25920C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */; };
 		BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */; };
 		BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */; };
+		BD91F26620C700BA004E28D8 /* PreBattleViewControllerTVOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F26520C700BA004E28D8 /* PreBattleViewControllerTVOS.swift */; };
 		EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */; };
 		EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */; };
-		ECB25EE020C1A32B00F0333D /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,9 +137,9 @@
 		BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedPlayersCellView.xib; sourceTree = "<group>"; };
 		BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersView.swift; sourceTree = "<group>"; };
+		BD91F26520C700BA004E28D8 /* PreBattleViewControllerTVOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreBattleViewControllerTVOS.swift; sourceTree = "<group>"; };
 		EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
 		EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
-		ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBattleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,8 +334,8 @@
 		BD6DB4D920BEE25300F8ABDE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BD91F26520C700BA004E28D8 /* PreBattleViewControllerTVOS.swift */,
 				BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */,
-				ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */,
 				BD91F25A20C2DF25004E28D8 /* ConnectedPlayersView */,
 			);
 			path = ViewControllers;
@@ -640,7 +640,6 @@
 				BD6DB45520BDED1B00F8ABDE /* AppDelegate.swift in Sources */,
 				BD6DB4C720BE360B00F8ABDE /* SortStarterState.swift in Sources */,
 				BD7799EC20C1D7600081C42F /* ConnectedPlayersViewController.swift in Sources */,
-				ECB25EE020C1A32B00F0333D /* PreBattleViewController.swift in Sources */,
 				BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */,
 				BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */,
 				BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */,
@@ -649,6 +648,7 @@
 				BD6DB4C920BE361A00F8ABDE /* ChooseStarterState.swift in Sources */,
 				BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */,
 				BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */,
+				BD91F26620C700BA004E28D8 /* PreBattleViewControllerTVOS.swift in Sources */,
 				BD7799C920BEE64C0081C42F /* Round.swift in Sources */,
 				BD6DB4B420BE250400F8ABDE /* State.swift in Sources */,
 				BD91F25920C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift in Sources */,

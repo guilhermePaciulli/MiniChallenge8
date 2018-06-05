@@ -104,7 +104,7 @@
         <!--Pre Battle View Controller-->
         <scene sceneID="pgD-pM-jOy">
             <objects>
-                <viewController storyboardIdentifier="preBattleViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FiL-3W-Bjf" customClass="PreBattleViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="chooseStarterViewController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FiL-3W-Bjf" customClass="PreBattleViewController" customModule="MiniChallenge8iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U1y-aZ-Zgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

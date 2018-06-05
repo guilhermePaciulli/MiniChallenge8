@@ -103,6 +103,10 @@ extension WaitingViewController: ConnectionDelegate, ReceiverDelegate {
                 }
             case .waiting:
                 break
+            case .chooseStarter:
+                if let chooseStarterViewController = self.storyboard?.instantiateViewController(withIdentifier: "chooseStarterViewController") {
+                    self.present(chooseStarterViewController, animated: true, completion: nil)
+                }
             }
         }
     }
