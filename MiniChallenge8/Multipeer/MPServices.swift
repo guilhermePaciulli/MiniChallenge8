@@ -47,6 +47,7 @@ class DisplayScreen: Codable {
 enum Screen: String, Codable {
     case waiting = "waitingScreen"
     case characterEditing = "characterEditingScreen"
+    case chooseStarter = "chooseStarterScreen"
 }
 
 enum Starter: String, Codable {

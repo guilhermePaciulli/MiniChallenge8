@@ -126,7 +126,7 @@ extension ChooseCharacterViewController: ReceiverDelegate {
                 if let waitingViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
                     self.present(waitingViewController, animated: true, completion: nil)
                 }
-            case .characterEditing:
+            case .characterEditing, .chooseStarter:
                 break
             }
         }

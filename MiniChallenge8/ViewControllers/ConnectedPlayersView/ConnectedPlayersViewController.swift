@@ -9,16 +9,26 @@
 import UIKit
 import MultipeerConnectivity
 
-class ConnectedPlayersCollectionViewController: UICollectionViewController {
+class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    @IBOutlet weak var instructionsLabel: UILabel!
     
     let reuseIdentifier = "connectedPlayersCollectionViewCell"
     
     var connectedPlayers: [Player] = []
-
+    
+    let minimumPlayers = 2
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.collectionView!.register(ConnectedPlayersCollectionViewCell.self, forCellWithReuseIdentifier: self.reuseIdentifier)
         self.collectionView?.delegate = self
+        self.collectionView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +42,7 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
                                         avatar: Avatar(rawValue: "rapper\((arc4random_uniform(5) + 1)).png")!,
                                         peerID: MCPeerID.init(displayName: "Hey"))
         self.connectedPlayers.append(appleTVPlayer)
+        self.updateStartButton()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -41,16 +52,16 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         MPHelper.shared.stopAdvertising()
     }
     
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.connectedPlayers.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.reuseIdentifier, for: indexPath) as? ConnectedPlayersCollectionViewCell else {
             return UICollectionViewCell()
         }
@@ -58,17 +69,38 @@ class ConnectedPlayersCollectionViewController: UICollectionViewController {
         cell.innerView = UINib.init(nibName: "ConnectedPlayersCellView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? ConnectedPlayersView
         cell.innerView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size: cell.frame.size)
         cell.addSubview(cell.innerView)
-        
+
         let cellPlayer = self.connectedPlayers[indexPath.row]
         cell.innerView.rapperName.text = cellPlayer.name
         cell.innerView.rapperImage.image = cellPlayer.avatar
-        
+
         return cell
     }
     
+    @IBAction func didPressStart(_ sender: Any) {
+        if self.connectedPlayers.count >= self.minimumPlayers {
+            if let preBattleViewController = self.storyboard?.instantiateViewController(withIdentifier: "preBattleViewController") as? PreBattleViewControllerTVOS {
+                preBattleViewController.championship = Championship(players: self.connectedPlayers)
+                self.present(preBattleViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func updateStartButton() {
+        if self.connectedPlayers.count < self.minimumPlayers {
+            self.instructionsLabel.text = "use o app no iphone para entrar - mínimo são 3 jogadores"
+            self.startButton.isEnabled = false
+        } else if self.connectedPlayers.count <= 6 {
+            self.instructionsLabel.text = "use o app no iphone para entrar"
+            self.startButton.isEnabled = true
+        } else {
+            self.instructionsLabel.text = "pressione o botão do controle para começar"
+            self.startButton.isEnabled = true
+        }
+    }
 }
 
-extension ConnectedPlayersCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension ConnectedPlayersViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout,
@@ -95,7 +127,7 @@ extension ConnectedPlayersCollectionViewController: UICollectionViewDelegateFlow
     }
 }
 
-extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
+extension ConnectedPlayersViewController: ConnectionDelegate {
     
     func didBeginConnection(to peerID: MCPeerID) {}
     
@@ -115,11 +147,12 @@ extension ConnectedPlayersCollectionViewController: ConnectionDelegate {
     func didLostConnection(with peerID: MCPeerID) {
         self.connectedPlayers = self.connectedPlayers.filter({ $0.peerID != peerID })
         self.collectionView?.reloadData()
+        self.updateStartButton()
     }
     
 }
 
-extension ConnectedPlayersCollectionViewController: ReceiverDelegate {
+extension ConnectedPlayersViewController: ReceiverDelegate {
     
     func receive(data: Data, from peer: MCPeerID) {
         if let playerDataAdded = self.connectedPlayers.filter({ $0.peerID == peer }).first,
@@ -130,6 +163,7 @@ extension ConnectedPlayersCollectionViewController: ReceiverDelegate {
             playerDataAdded.setAvatar(avatar: playerData.avatar)
             MPHelper.shared.send(data: waitScreenData, dataMode: .reliable, for: [peer])
             self.collectionView?.reloadData()
+            self.updateStartButton()
         }
     }
     
