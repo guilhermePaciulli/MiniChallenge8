@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Add-Ed-2zw">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="2745" y="1207"/>
         </scene>
-        <!--Avoiding Merge View Controller-->
+        <!--Battle Game View Controller-->
         <scene sceneID="DfE-b8-rGt">
             <objects>
-                <viewController id="Add-Ed-2zw" customClass="AvoidingMergeViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="battleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Add-Ed-2zw" customClass="BattleGameViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sID-k0-dM2"/>
                         <viewControllerLayoutGuide type="bottom" id="35j-Ok-Y9E"/>
@@ -258,13 +258,17 @@
                                     <constraint firstAttribute="height" constant="15" id="LMg-pE-AfP"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-OL-h7X">
-                                <rect key="frame" x="1468" y="469" width="150" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-OL-h7X">
+                                <rect key="frame" x="1359" y="459" width="162" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hV2-OL-h7X" secondAttribute="height" multiplier="1:1" id="AtI-GM-qJB"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-3t-e9f">
-                                <rect key="frame" x="302" y="469" width="150" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-3t-e9f">
+                                <rect key="frame" x="399" y="459" width="162" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xP9-3t-e9f" secondAttribute="height" multiplier="1:1" id="OVV-a6-xBg"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-re-msn">
                                 <rect key="frame" x="840" y="476" width="240" height="128"/>
@@ -284,32 +288,43 @@
                                 <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V1Q-bj-WSU">
-                                <rect key="frame" x="1223" y="655" width="195" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="increaseP2Bar:" destination="Add-Ed-2zw" eventType="primaryActionTriggered" id="NBt-Ge-at2"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-Ds-OZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="180"/>
+                                <color key="textColor" red="1" green="0.83921568629999999" blue="0.39652104329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="hV2-OL-h7X" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="5u4-Ae-hgr"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="60" id="G3M-85-VtO"/>
+                            <constraint firstItem="hV2-OL-h7X" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" multiplier="1.5" id="Hwi-Vy-tqg"/>
+                            <constraint firstItem="1OB-Ds-OZZ" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" id="Kpv-aB-KWf"/>
+                            <constraint firstItem="hV2-OL-h7X" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.15" id="MKF-aw-Fbc"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="leading" secondItem="uPX-dz-1K5" secondAttribute="trailing" id="Mrw-9f-NgG"/>
                             <constraint firstItem="uPX-dz-1K5" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="90" id="NCM-Nn-o70"/>
                             <constraint firstItem="hhC-UI-G1t" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="90" id="T7c-a1-n9R"/>
+                            <constraint firstItem="1OB-Ds-OZZ" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="TZi-wB-Qbo"/>
+                            <constraint firstItem="1OB-Ds-OZZ" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" id="Z1p-9h-WHR"/>
+                            <constraint firstItem="xP9-3t-e9f" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" multiplier="0.5" id="dJH-Np-fok"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="f5z-AI-qfr"/>
                             <constraint firstItem="hhC-UI-G1t" firstAttribute="leading" secondItem="yLg-Xm-xPH" secondAttribute="trailing" id="gbw-N8-8DG"/>
+                            <constraint firstItem="1OB-Ds-OZZ" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" id="pXV-H9-Fmf"/>
+                            <constraint firstItem="xP9-3t-e9f" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.15" id="w0S-iT-ytc"/>
+                            <constraint firstItem="xP9-3t-e9f" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="wFk-Zz-EIA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ppa-VW-rKa"/>
                     </view>
                     <connections>
-                        <outlet property="player1Bar" destination="uPX-dz-1K5" id="csb-bq-j1e"/>
-                        <outlet property="player1PercentageLabel" destination="X0q-LM-gHs" id="9ut-QN-8HJ"/>
-                        <outlet property="player2Bar" destination="hhC-UI-G1t" id="nw6-Wy-7Y6"/>
-                        <outlet property="player2Percentagelabel" destination="QBe-2P-fVF" id="yr7-Ls-Qi8"/>
-                        <outlet property="ringView" destination="pYw-re-msn" id="SAu-Pg-Oj7"/>
+                        <outlet property="countdownLabel" destination="1OB-Ds-OZZ" id="QP2-Rc-41K"/>
+                        <outlet property="player1Avatar" destination="xP9-3t-e9f" id="JRH-pY-9cQ"/>
+                        <outlet property="player1Bar" destination="uPX-dz-1K5" id="jdn-ud-7RK"/>
+                        <outlet property="player1NameLabel" destination="Uwj-Um-CS1" id="hX2-yl-61N"/>
+                        <outlet property="player1PercentageLabel" destination="X0q-LM-gHs" id="9Qp-nK-lRZ"/>
+                        <outlet property="player2Avatar" destination="hV2-OL-h7X" id="5M3-dh-Eqi"/>
+                        <outlet property="player2Bar" destination="hhC-UI-G1t" id="P5g-gC-jhP"/>
+                        <outlet property="player2NameLabel" destination="kjm-9H-MDO" id="Qxz-iB-inj"/>
+                        <outlet property="player2PercentageLabel" destination="QBe-2P-fVF" id="OsB-1D-6cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCv-EN-vNW" userLabel="First Responder" sceneMemberID="firstResponder"/>

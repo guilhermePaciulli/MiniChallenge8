@@ -46,8 +46,8 @@ extension UIView{
         let circlePath = UIBezierPath(
             arcCenter: CGPoint(x: bounds.size.width/2.0, y: bounds.size.height/2.0),
             radius: CGFloat( halfSize - (desiredLineWidth/2) ),
-            startAngle: CGFloat(-M_PI/2.0),
-            endAngle:CGFloat((3.0*M_PI)/2.0),
+            startAngle: CGFloat(-.pi/2.0),
+            endAngle:CGFloat((3.0 * .pi)/2.0),
             clockwise: true)
         
         let shapeLayer = CAShapeLayer()

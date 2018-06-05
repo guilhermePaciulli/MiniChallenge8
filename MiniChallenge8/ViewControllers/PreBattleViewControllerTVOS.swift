@@ -86,18 +86,22 @@ class PreBattleViewControllerTVOS: UIViewController {
     
     @IBAction func didPressBattleButton(_ sender: Any) {
         if let playerToStart = self.playerToStart {
-            
+            if let battleViewController = self.storyboard?.instantiateViewController(withIdentifier: "battleViewController") as? BattleGameViewController {
+                battleViewController.currentPlayer = playerToStart
+                battleViewController.battle = self.currentBattle
+                self.present(battleViewController, animated: true, completion: nil)
+            }
         }
     }
     
     @objc func didSelectOpponentStarter() {
-        if self.playerToStart?.name == "mc t-vos" && self.playerToStart == nil {
+        if self.playerChosen.name == "mc t-vos" && self.playerToStart == nil {
             self.didChose(starter: ChooseStarterStruct(starter: .opponent))
         }
     }
     
     @objc func didSelectPlayerStarter() {
-        if self.playerToStart?.name == "mc t-vos" && self.playerToStart == nil {
+        if self.playerChosen.name == "mc t-vos" && self.playerToStart == nil {
             self.didChose(starter: ChooseStarterStruct(starter: .player))
         }
     }

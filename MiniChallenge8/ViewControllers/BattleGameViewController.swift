@@ -7,16 +7,41 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class BattleGameViewController: UIViewController {
     
+    @IBOutlet weak var player1NameLabel: UILabel!
+    @IBOutlet weak var player1Avatar: UIImageView!
+    @IBOutlet weak var player1PercentageLabel: UILabel!
+    @IBOutlet weak var player1Bar: UIView!
+    
+    @IBOutlet weak var player2NameLabel: UILabel!
+    @IBOutlet weak var player2Avatar: UIImageView!
+    @IBOutlet weak var player2PercentageLabel: UILabel!
+    @IBOutlet weak var player2Bar: UIView!
+    
+    @IBOutlet weak var countdownLabel: UILabel!
+    
     var currentState: State!
     
+    var currentPlayer: Player!
+    
     var battle: Battle!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MPHelper.shared.receiverDelegate = self
+        
         self.currentState = StartBattleState(viewController: self)
+        if let willEnterState = self.currentState.willEnterState { willEnterState() }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if let didEnterState = self.currentState.didEnterState {
             didEnterState()
         }
@@ -25,7 +50,18 @@ class BattleGameViewController: UIViewController {
     func moveTo(state: State) {
         if let didExitState = self.currentState.didExitState { didExitState() }
         self.currentState = state
+        if let willEnterState = self.currentState.willEnterState { willEnterState() }
         if let didEnterState = self.currentState.didEnterState { didEnterState() }
     }
 
+}
+
+extension BattleGameViewController: ReceiverDelegate {
+    
+    func receive(data: Data, from peer: MCPeerID) {
+        if let didReceiveData = self.currentState.didReceive { didReceiveData(data, peer) }
+    }
+    
+    func receive(error: Error) {}
+    
 }

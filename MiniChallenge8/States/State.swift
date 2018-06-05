@@ -12,8 +12,9 @@ import MultipeerConnectivity
 
 @objc protocol State {
     var viewController: BattleGameViewController { get set }
+    @objc optional func willEnterState()
     @objc optional func didEnterState()
     @objc optional func didExitState()
     @objc optional func didPressMainButton()
-    @objc optional func didReceiveData(from peerID: MCPeerID)
+    @objc optional func didReceive(data: Data, from peerID: MCPeerID)
 }
