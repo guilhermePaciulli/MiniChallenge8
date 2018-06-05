@@ -52,6 +52,8 @@
 		BD91F25920C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */; };
 		BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */; };
 		BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */; };
+		EC0564F020C5DADA0044397F /* AvoidingMerge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0564EF20C5DADA0044397F /* AvoidingMerge.storyboard */; };
+		EC0564F220C5DE690044397F /* AvoidingMergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0564F120C5DE690044397F /* AvoidingMergeViewController.swift */; };
 		EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */; };
 		EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */; };
 		ECB25EE020C1A32B00F0333D /* PreBattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */; };
@@ -139,6 +141,8 @@
 		BD91F25820C2DED2004E28D8 /* ConnectedPlayersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD91F25B20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConnectedPlayersCellView.xib; sourceTree = "<group>"; };
 		BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersView.swift; sourceTree = "<group>"; };
+		EC0564EF20C5DADA0044397F /* AvoidingMerge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AvoidingMerge.storyboard; sourceTree = "<group>"; };
+		EC0564F120C5DE690044397F /* AvoidingMergeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoidingMergeViewController.swift; sourceTree = "<group>"; };
 		EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
 		EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreBattleViewController.swift; sourceTree = "<group>"; };
@@ -328,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB45820BDED1B00F8ABDE /* Main.storyboard */,
+				EC0564EF20C5DADA0044397F /* AvoidingMerge.storyboard */,
 				BD91F25F20C2F328004E28D8 /* Custom Views */,
 			);
 			path = Storyboards;
@@ -340,6 +345,7 @@
 				BD7799DD20BF2C430081C42F /* ConnectionViewController.swift */,
 				ECB25EDF20C1A32B00F0333D /* PreBattleViewController.swift */,
 				BD91F25A20C2DF25004E28D8 /* ConnectedPlayersView */,
+				EC0564F120C5DE690044397F /* AvoidingMergeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -582,6 +588,7 @@
 			files = (
 				BD7799E020BF419B0081C42F /* pricedown bl.ttf in Resources */,
 				BD6DB45C20BDED1E00F8ABDE /* Assets.xcassets in Resources */,
+				EC0564F020C5DADA0044397F /* AvoidingMerge.storyboard in Resources */,
 				BD6DB45A20BDED1B00F8ABDE /* Main.storyboard in Resources */,
 				BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */,
 			);
@@ -637,6 +644,7 @@
 				BD7799CB20BEE6550081C42F /* Turn.swift in Sources */,
 				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
 				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
+				EC0564F220C5DE690044397F /* AvoidingMergeViewController.swift in Sources */,
 				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
 				BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */,
 				BD7799DE20BF2C430081C42F /* ConnectionViewController.swift in Sources */,
@@ -883,7 +891,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = R8QSMBZSJR;
 				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -904,7 +912,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLLH384AC4;
+				DEVELOPMENT_TEAM = R8QSMBZSJR;
 				INFOPLIST_FILE = "$(SRCROOT)/MiniChallenge8/Misc/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

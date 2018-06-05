@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vhn-5P-nYu">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="pricedown bl.ttf">
+            <string>PricedownBl-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Avoiding Merge View Controller-->
+        <scene sceneID="gbE-YQ-TUR">
+            <objects>
+                <viewController id="Vhn-5P-nYu" customClass="AvoidingMergeViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLO-Fa-SYs"/>
+                        <viewControllerLayoutGuide type="bottom" id="I8c-TM-hBQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qUB-uu-Sau">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Battle" translatesAutoresizingMaskIntoConstraints="NO" id="IqJ-af-Ctl">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdf-0Y-idX">
+                                <rect key="frame" x="54" y="36" width="200" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="60"/>
+                                <color key="textColor" red="0.99607843137254903" green="0.83529411764705885" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mc capivara" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmm-hO-51h">
+                                <rect key="frame" x="1533" y="36" width="325" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="60"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixN-1B-On6">
+                                <rect key="frame" x="953" y="120" width="14" height="74"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="JUu-6W-vLd"/>
+                                    <constraint firstAttribute="width" constant="14" id="qQx-AQ-hHU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bP0-aP-Dl8">
+                                <rect key="frame" x="967" y="150" width="320" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="HDz-Yf-7Wh"/>
+                                    <constraint firstAttribute="height" constant="15" id="cFI-tk-89f"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a37-38-Agi">
+                                <rect key="frame" x="633" y="150" width="320" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="8CK-sJ-o8B"/>
+                                    <constraint firstAttribute="width" constant="320" id="vBo-mu-2pP"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="qNM-TX-fJH">
+                                <rect key="frame" x="1468" y="469" width="150" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="4pT-f8-Pwp">
+                                <rect key="frame" x="302" y="469" width="150" height="143"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJo-hi-vo0">
+                                <rect key="frame" x="840" y="476" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Ba-fyL">
+                                <rect key="frame" x="901" y="170" width="44" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="20"/>
+                                <color key="textColor" red="0.99215686274509807" green="0.83137254901960789" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tj-EF-HrS">
+                                <rect key="frame" x="975" y="170" width="44" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="20"/>
+                                <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMi-mM-pTc">
+                                <rect key="frame" x="1223" y="655" width="195" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="increaseP2Bar:" destination="Vhn-5P-nYu" eventType="primaryActionTriggered" id="8lc-GK-G6M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ixN-1B-On6" firstAttribute="top" secondItem="TAU-r8-ecP" secondAttribute="top" constant="60" id="6T7-Cw-Yan"/>
+                            <constraint firstItem="bP0-aP-Dl8" firstAttribute="leading" secondItem="ixN-1B-On6" secondAttribute="trailing" id="CUW-kr-5lB"/>
+                            <constraint firstItem="ixN-1B-On6" firstAttribute="centerX" secondItem="qUB-uu-Sau" secondAttribute="centerX" id="Mzj-EV-PKg"/>
+                            <constraint firstItem="a37-38-Agi" firstAttribute="top" secondItem="TAU-r8-ecP" secondAttribute="top" constant="90" id="TKc-Xn-1eZ"/>
+                            <constraint firstItem="bP0-aP-Dl8" firstAttribute="top" secondItem="TAU-r8-ecP" secondAttribute="top" constant="90" id="ds9-Qs-US6"/>
+                            <constraint firstItem="ixN-1B-On6" firstAttribute="leading" secondItem="a37-38-Agi" secondAttribute="trailing" id="gqH-Qt-NV7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TAU-r8-ecP"/>
+                    </view>
+                    <connections>
+                        <outlet property="player1Bar" destination="a37-38-Agi" id="n1T-5r-bIf"/>
+                        <outlet property="player1PercentageLabel" destination="ceO-Ba-fyL" id="UDE-J2-VfV"/>
+                        <outlet property="player2Bar" destination="bP0-aP-Dl8" id="Ccq-JH-7QK"/>
+                        <outlet property="player2Percentagelabel" destination="1Tj-EF-HrS" id="UDd-5z-xwj"/>
+                        <outlet property="ringView" destination="aJo-hi-vo0" id="haY-cI-oN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zly-aB-1ye" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1343" y="-571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Battle" width="1920" height="1080"/>
+        <image name="rapper4" width="227" height="227"/>
+    </resources>
+</document>
