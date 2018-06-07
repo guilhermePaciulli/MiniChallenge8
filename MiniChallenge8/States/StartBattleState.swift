@@ -63,8 +63,48 @@ class StartBattleState: State {
             image?.frame.size = CGSize(width: (image?.frame.width)! * 2, height: (image?.frame.height)! * 2)
             image?.frame.origin = CGPoint.init(x: self.viewController.view.center.x - (image.frame.width / 2),
                                                y: self.viewController.view.center.y - (image.frame.height / 2))
+            self.viewController.ringView.drawRingFittingInsideView()
         }, completion: { _ in
+    
         })
     }
     
 }
+
+extension UIView{
+    
+    func drawRingFittingInsideView(){
+        let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
+        let desiredLineWidth:CGFloat = 30.0
+        
+        let circlePath = UIBezierPath(
+            arcCenter: CGPoint(x: bounds.size.width/2.0, y: bounds.size.height/2.0),
+            radius: CGFloat( halfSize - (desiredLineWidth/2) ),
+            startAngle: CGFloat(-.pi/2.0),
+            endAngle:CGFloat((3.0 * .pi)/2.0),
+            clockwise: true)
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = circlePath.cgPath
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.strokeColor = UIColor.init(red: 151/255, green: 237/255, blue: 181/255, alpha: 1.0).cgColor
+        shapeLayer.lineWidth = desiredLineWidth
+        shapeLayer.strokeEnd = 0.0
+        layer.addSublayer(shapeLayer)
+        //animation
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.duration = 60.0
+        animation.fromValue = 1
+        animation.toValue = 0
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        shapeLayer.strokeEnd = 1.0
+        shapeLayer.add(animation, forKey: "animateCircle")
+        shapeLayer.animation(forKey: "animateCircle")
+    }
+    
+    
+    
+}
+
+
+

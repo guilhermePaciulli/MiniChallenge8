@@ -268,17 +268,20 @@
                                     <constraint firstAttribute="width" secondItem="xP9-3t-e9f" secondAttribute="height" multiplier="1:1" id="OVV-a6-xBg"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-re-msn">
-                                <rect key="frame" x="840" y="476" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-re-msn" userLabel="ringView">
+                                <rect key="frame" x="770" y="350" width="380" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="SDQ-v0-tr5"/>
+                                    <constraint firstAttribute="width" secondItem="pYw-re-msn" secondAttribute="height" multiplier="1:1" id="nSG-bq-zxh"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-LM-gHs">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-LM-gHs">
                                 <rect key="frame" x="849" y="170" width="96" height="24"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="20"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="75%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-2P-fVF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-2P-fVF">
                                 <rect key="frame" x="975" y="170" width="96" height="24"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="20"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -294,6 +297,7 @@
                         <constraints>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="leading" secondItem="yLg-Xm-xPH" secondAttribute="trailing" constant="8" id="19v-7X-qco"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="top" secondItem="hhC-UI-G1t" secondAttribute="bottom" constant="5" id="4B6-89-sn1"/>
+                            <constraint firstItem="pYw-re-msn" firstAttribute="centerY" secondItem="tXe-uJ-mPw" secondAttribute="centerY" id="5Uz-UD-bLt"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="top" secondItem="kjm-9H-MDO" secondAttribute="top" constant="24" id="5q9-a0-BUb"/>
                             <constraint firstItem="hV2-OL-h7X" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="5u4-Ae-hgr"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="leading" secondItem="Uwj-Um-CS1" secondAttribute="leading" constant="36" id="8iw-GD-Qp9"/>
@@ -313,6 +317,7 @@
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" id="Z1p-9h-WHR"/>
                             <constraint firstItem="Uwj-Um-CS1" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" multiplier="0.45" id="bcT-ao-01Y"/>
                             <constraint firstItem="X0q-LM-gHs" firstAttribute="top" secondItem="uPX-dz-1K5" secondAttribute="bottom" constant="5" id="bgB-K7-ixn"/>
+                            <constraint firstItem="pYw-re-msn" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="bnm-WE-BB0"/>
                             <constraint firstItem="xP9-3t-e9f" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" multiplier="0.5" id="dJH-Np-fok"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="f5z-AI-qfr"/>
                             <constraint firstItem="hhC-UI-G1t" firstAttribute="leading" secondItem="yLg-Xm-xPH" secondAttribute="trailing" id="gbw-N8-8DG"/>
@@ -333,6 +338,7 @@
                         <outlet property="player2Bar" destination="hhC-UI-G1t" id="P5g-gC-jhP"/>
                         <outlet property="player2NameLabel" destination="kjm-9H-MDO" id="Qxz-iB-inj"/>
                         <outlet property="player2PercentageLabel" destination="QBe-2P-fVF" id="OsB-1D-6cd"/>
+                        <outlet property="ringView" destination="pYw-re-msn" id="nOu-1U-KOB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCv-EN-vNW" userLabel="First Responder" sceneMemberID="firstResponder"/>

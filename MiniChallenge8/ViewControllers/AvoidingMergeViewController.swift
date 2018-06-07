@@ -39,34 +39,34 @@ class AvoidingMergeViewController: UIViewController {
 
 extension UIView{
     
-    func drawRingFittingInsideView(){
-        let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
-        let desiredLineWidth:CGFloat = 8.0
-        
-        let circlePath = UIBezierPath(
-            arcCenter: CGPoint(x: bounds.size.width/2.0, y: bounds.size.height/2.0),
-            radius: CGFloat( halfSize - (desiredLineWidth/2) ),
-            startAngle: CGFloat(-.pi/2.0),
-            endAngle:CGFloat((3.0 * .pi)/2.0),
-            clockwise: true)
-        
-        let shapeLayer = CAShapeLayer()
-        shapeLayer.path = circlePath.cgPath
-        shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = UIColor.red.cgColor
-        shapeLayer.lineWidth = desiredLineWidth
-        shapeLayer.strokeEnd = 0.0
-        layer.addSublayer(shapeLayer)
-       //animation
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 1.5
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        shapeLayer.strokeEnd = 1.0
-        shapeLayer.add(animation, forKey: "animateCircle")
-        shapeLayer.animation(forKey: "animateCircle")
-    }
+//    func drawRingFittingInsideView(){
+//        let halfSize:CGFloat = min( bounds.size.width/2, bounds.size.height/2)
+//        let desiredLineWidth:CGFloat = 8.0
+//        
+//        let circlePath = UIBezierPath(
+//            arcCenter: CGPoint(x: bounds.size.width/2.0, y: bounds.size.height/2.0),
+//            radius: CGFloat( halfSize - (desiredLineWidth/2) ),
+//            startAngle: CGFloat(-.pi/2.0),
+//            endAngle:CGFloat((3.0 * .pi)/2.0),
+//            clockwise: true)
+//        
+//        let shapeLayer = CAShapeLayer()
+//        shapeLayer.path = circlePath.cgPath
+//        shapeLayer.fillColor = UIColor.clear.cgColor
+//        shapeLayer.strokeColor = UIColor.red.cgColor
+//        shapeLayer.lineWidth = desiredLineWidth
+//        shapeLayer.strokeEnd = 0.0
+//        layer.addSublayer(shapeLayer)
+//       //animation
+//        let animation = CABasicAnimation(keyPath: "strokeEnd")
+//        animation.duration = 1.5
+//        animation.fromValue = 0
+//        animation.toValue = 1
+//        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+//        shapeLayer.strokeEnd = 1.0
+//        shapeLayer.add(animation, forKey: "animateCircle")
+//        shapeLayer.animation(forKey: "animateCircle")
+//    }
     
     
 

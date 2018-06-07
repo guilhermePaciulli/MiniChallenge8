@@ -8,6 +8,7 @@
 
 import UIKit
 import MultipeerConnectivity
+import AVFoundation
 
 class BattleGameViewController: UIViewController {
     
@@ -22,6 +23,9 @@ class BattleGameViewController: UIViewController {
     @IBOutlet weak var player2Bar: UIView!
     
     @IBOutlet weak var countdownLabel: UILabel!
+    @IBOutlet weak var ringView: UIView!
+    
+    var audioPlayer = AVAudioPlayer()
     
     var currentState: State!
     
@@ -39,6 +43,22 @@ class BattleGameViewController: UIViewController {
         
         self.currentState = StartBattleState(viewController: self)
         if let willEnterState = self.currentState.willEnterState { willEnterState() }
+        
+        self.playSong()
+        
+    }
+    
+    func playSong(){
+        let sound = URL(fileURLWithPath: Bundle.main.path(forResource: "beat01-tvOS", ofType: "mp3")!)
+            do{
+                audioPlayer = try AVAudioPlayer(contentsOf: sound)
+                audioPlayer.prepareToPlay()
+            }catch{
+                print("problem in playing music")
+        }
+        audioPlayer.play()
+        audioPlayer.volume = 100.0
+        audioPlayer.numberOfLoops = 3
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -53,6 +53,7 @@
 		BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */; };
 		BD91F26620C700BA004E28D8 /* PreBattleViewControllerTVOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD91F26520C700BA004E28D8 /* PreBattleViewControllerTVOS.swift */; };
 		EC0564F220C5DE690044397F /* AvoidingMergeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0564F120C5DE690044397F /* AvoidingMergeViewController.swift */; };
+		EC0564F420C981950044397F /* beat01-tvOS.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EC0564F320C981950044397F /* beat01-tvOS.mp3 */; };
 		EC25C89B20C17AB800BB970F /* ChooseCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */; };
 		EC75AE9520C17F030074E435 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -140,6 +141,7 @@
 		BD91F25D20C2F323004E28D8 /* ConnectedPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectedPlayersView.swift; sourceTree = "<group>"; };
 		BD91F26520C700BA004E28D8 /* PreBattleViewControllerTVOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreBattleViewControllerTVOS.swift; sourceTree = "<group>"; };
 		EC0564F120C5DE690044397F /* AvoidingMergeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvoidingMergeViewController.swift; sourceTree = "<group>"; };
+		EC0564F320C981950044397F /* beat01-tvOS.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "beat01-tvOS.mp3"; sourceTree = "<group>"; };
 		EC25C89A20C17AB800BB970F /* ChooseCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCharacterViewController.swift; sourceTree = "<group>"; };
 		EC75AE9420C17F030074E435 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +319,7 @@
 		BD6DB4D720BEE23E00F8ABDE /* Misc */ = {
 			isa = PBXGroup;
 			children = (
+				EC0564F320C981950044397F /* beat01-tvOS.mp3 */,
 				BD6DB45420BDED1B00F8ABDE /* AppDelegate.swift */,
 				BD6DB45B20BDED1E00F8ABDE /* Assets.xcassets */,
 				BD6DB45D20BDED1E00F8ABDE /* Info.plist */,
@@ -583,6 +586,7 @@
 				BD7799E020BF419B0081C42F /* pricedown bl.ttf in Resources */,
 				BD6DB45C20BDED1E00F8ABDE /* Assets.xcassets in Resources */,
 				BD6DB45A20BDED1B00F8ABDE /* Main.storyboard in Resources */,
+				EC0564F420C981950044397F /* beat01-tvOS.mp3 in Resources */,
 				BD91F25C20C2F0CF004E28D8 /* ConnectedPlayersCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
