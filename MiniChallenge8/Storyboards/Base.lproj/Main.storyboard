@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -256,17 +256,13 @@
                                     <constraint firstAttribute="height" constant="15" id="yhT-6i-HJ3"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-OL-h7X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="hV2-OL-h7X">
                                 <rect key="frame" x="1359" y="459" width="162" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hV2-OL-h7X" secondAttribute="height" multiplier="1:1" id="AtI-GM-qJB"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-3t-e9f">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper4" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-3t-e9f">
                                 <rect key="frame" x="399" y="459" width="162" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xP9-3t-e9f" secondAttribute="height" multiplier="1:1" id="OVV-a6-xBg"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pYw-re-msn" userLabel="ringView">
                                 <rect key="frame" x="770" y="350" width="380" height="380"/>
@@ -299,17 +295,14 @@
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="leading" secondItem="X0q-LM-gHs" secondAttribute="trailing" constant="8" id="3ay-oF-ccB"/>
                             <constraint firstItem="pYw-re-msn" firstAttribute="centerY" secondItem="tXe-uJ-mPw" secondAttribute="centerY" id="5Uz-UD-bLt"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="top" secondItem="kjm-9H-MDO" secondAttribute="top" constant="24" id="5q9-a0-BUb"/>
-                            <constraint firstItem="hV2-OL-h7X" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="5u4-Ae-hgr"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="leading" secondItem="Uwj-Um-CS1" secondAttribute="leading" constant="36" id="8iw-GD-Qp9"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="CNO-BD-O49"/>
                             <constraint firstItem="hhC-UI-G1t" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="60" id="DjO-h3-SWE"/>
-                            <constraint firstItem="hV2-OL-h7X" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" multiplier="1.5" id="Hwi-Vy-tqg"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="width" secondItem="hhC-UI-G1t" secondAttribute="width" id="KeO-zG-HYH"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" id="Kpv-aB-KWf"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="top" secondItem="hhC-UI-G1t" secondAttribute="bottom" constant="5" id="LTQ-Zr-ubc"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="leading" secondItem="uPX-dz-1K5" secondAttribute="trailing" id="Lpn-QP-H2y"/>
                             <constraint firstItem="kjm-9H-MDO" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" multiplier="0.45" id="LxE-o1-iea"/>
-                            <constraint firstItem="hV2-OL-h7X" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.15" id="MKF-aw-Fbc"/>
                             <constraint firstItem="kjm-9H-MDO" firstAttribute="trailing" secondItem="Ppa-VW-rKa" secondAttribute="trailing" constant="28" id="MpZ-MQ-UBd"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="30" id="Q3c-Ir-xGD"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="top" secondItem="Uwj-Um-CS1" secondAttribute="top" constant="24" id="Sbq-I0-4f8"/>
@@ -318,13 +311,10 @@
                             <constraint firstItem="Uwj-Um-CS1" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" multiplier="0.45" id="bcT-ao-01Y"/>
                             <constraint firstItem="pYw-re-msn" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="bnm-WE-BB0"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="leading" secondItem="yLg-Xm-xPH" secondAttribute="trailing" constant="8" id="c74-yY-jJT"/>
-                            <constraint firstItem="xP9-3t-e9f" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" multiplier="0.5" id="dJH-Np-fok"/>
                             <constraint firstItem="X0q-LM-gHs" firstAttribute="width" secondItem="QBe-2P-fVF" secondAttribute="width" id="i9A-Vd-RGr"/>
                             <constraint firstItem="X0q-LM-gHs" firstAttribute="top" secondItem="uPX-dz-1K5" secondAttribute="bottom" constant="5" id="j9w-AV-1eZ"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" id="pXV-H9-Fmf"/>
                             <constraint firstItem="uPX-dz-1K5" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="60" id="qt1-9f-GdR"/>
-                            <constraint firstItem="xP9-3t-e9f" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.15" id="w0S-iT-ytc"/>
-                            <constraint firstItem="xP9-3t-e9f" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="wFk-Zz-EIA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ppa-VW-rKa"/>
                     </view>

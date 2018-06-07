@@ -34,7 +34,7 @@ class ChooseStarterStruct: Codable {
 }
 
 class FeedbackStruct: Codable {
-    
+    var feed = "feedback"
 }
 
 class DisplayScreen: Codable {
@@ -48,6 +48,7 @@ enum Screen: String, Codable {
     case waiting = "waitingScreen"
     case characterEditing = "characterEditingScreen"
     case chooseStarter = "chooseStarterScreen"
+    case feedbackView = "feedbackView"
 }
 
 enum Starter: String, Codable {

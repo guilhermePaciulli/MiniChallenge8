@@ -107,6 +107,10 @@ extension WaitingViewController: ConnectionDelegate, ReceiverDelegate {
                 if let chooseStarterViewController = self.storyboard?.instantiateViewController(withIdentifier: "chooseStarterViewController") {
                     self.present(chooseStarterViewController, animated: true, completion: nil)
                 }
+            case .feedbackView:
+                if let feedbackViewController = self.storyboard?.instantiateViewController(withIdentifier: "feedbackViewController") {
+                    self.present(feedbackViewController, animated: true, completion: nil)
+                }
             }
         }
     }

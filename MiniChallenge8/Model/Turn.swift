@@ -9,7 +9,7 @@
 import Foundation
 
 class Turn {
-    
+        
     var player: Player
     
     var score: Int

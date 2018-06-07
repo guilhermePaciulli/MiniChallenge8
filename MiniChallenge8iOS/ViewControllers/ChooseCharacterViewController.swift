@@ -128,6 +128,8 @@ extension ChooseCharacterViewController: ReceiverDelegate {
                 }
             case .characterEditing, .chooseStarter:
                 break
+            case .feedbackView:
+                break
             }
         }
     }

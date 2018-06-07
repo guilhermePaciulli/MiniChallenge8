@@ -22,6 +22,8 @@ class BattleGameViewController: UIViewController {
     @IBOutlet weak var player2PercentageLabel: UILabel!
     @IBOutlet weak var player2Bar: UIView!
     
+    var barWidth: CGFloat!
+    
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var ringView: UIView!
     
@@ -30,11 +32,12 @@ class BattleGameViewController: UIViewController {
     var currentState: State!
     
     var currentPlayer: Player!
-    
+        
     var battle: Battle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barWidth = self.player1Bar.frame.size.width
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,14 +54,14 @@ class BattleGameViewController: UIViewController {
     func playSong(){
         let sound = URL(fileURLWithPath: Bundle.main.path(forResource: "beat01-tvOS", ofType: "mp3")!)
             do{
-                audioPlayer = try AVAudioPlayer(contentsOf: sound)
-                audioPlayer.prepareToPlay()
+                self.audioPlayer = try AVAudioPlayer(contentsOf: sound)
+                self.audioPlayer.prepareToPlay()
             }catch{
                 print("problem in playing music")
         }
-        audioPlayer.play()
-        audioPlayer.volume = 0.5
-        audioPlayer.numberOfLoops = 3
+        self.audioPlayer.play()
+        self.audioPlayer.volume = 0.5
+        self.audioPlayer.numberOfLoops = -1
     }
     
     override func viewDidAppear(_ animated: Bool) {
