@@ -57,7 +57,7 @@ class BattleGameViewController: UIViewController {
                 print("problem in playing music")
         }
         audioPlayer.play()
-        audioPlayer.volume = 100.0
+        audioPlayer.volume = 0.5
         audioPlayer.numberOfLoops = 3
     }
     
@@ -85,3 +85,6 @@ extension BattleGameViewController: ReceiverDelegate {
     func receive(error: Error) {}
     
 }
+
+
+

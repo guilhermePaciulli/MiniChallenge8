@@ -63,9 +63,9 @@ class StartBattleState: State {
             image?.frame.size = CGSize(width: (image?.frame.width)! * 2, height: (image?.frame.height)! * 2)
             image?.frame.origin = CGPoint.init(x: self.viewController.view.center.x - (image.frame.width / 2),
                                                y: self.viewController.view.center.y - (image.frame.height / 2))
-            self.viewController.ringView.drawRingFittingInsideView()
+            
         }, completion: { _ in
-    
+            self.viewController.moveTo(state: TurnState(viewController: self.viewController))
         })
     }
     
@@ -87,7 +87,7 @@ extension UIView{
         let shapeLayer = CAShapeLayer()
         shapeLayer.path = circlePath.cgPath
         shapeLayer.fillColor = UIColor.clear.cgColor
-        shapeLayer.strokeColor = UIColor.init(red: 151/255, green: 237/255, blue: 181/255, alpha: 1.0).cgColor
+        shapeLayer.strokeColor = UIColor.init(red: 39/255, green: 174/255, blue: 96/255, alpha: 1.0).cgColor
         shapeLayer.lineWidth = desiredLineWidth
         shapeLayer.strokeEnd = 0.0
         layer.addSublayer(shapeLayer)
@@ -101,10 +101,8 @@ extension UIView{
         shapeLayer.add(animation, forKey: "animateCircle")
         shapeLayer.animation(forKey: "animateCircle")
     }
-    
-    
-    
 }
+
 
 
 

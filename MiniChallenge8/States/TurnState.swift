@@ -18,9 +18,12 @@ class TurnState: State {
     }
     
     func didEnterState() {
+        //Aparecer com o ring
     }
     
     func didExitState() {
+        //Desaparecer com o ring
+        //Posicionar personagem
     }
     
 }
