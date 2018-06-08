@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gs-Kx-seu">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -204,6 +204,106 @@
             </objects>
             <point key="canvasLocation" x="2745" y="1207"/>
         </scene>
+        <!--Leaderboard View Controller-->
+        <scene sceneID="mVE-w0-O7r">
+            <objects>
+                <viewController id="3gs-Kx-seu" customClass="LeaderboardViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rq1-p1-2a1"/>
+                        <viewControllerLayoutGuide type="bottom" id="KxQ-Nt-wJ1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xWX-n3-zeL">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaderboard" translatesAutoresizingMaskIntoConstraints="NO" id="QI3-Bq-Nep">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="batalhas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwY-W7-6aj">
+                                <rect key="frame" x="672" y="60" width="576" height="87"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="72"/>
+                                <color key="textColor" red="1" green="0.83921568627450982" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" translatesAutoresizingMaskIntoConstraints="NO" id="9yR-zo-gys">
+                                <rect key="frame" x="453" y="193" width="1015" height="887"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell alpha="0.0" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="150" id="YKB-vk-K28" customClass="LeaderboardTableViewCell" customModule="MiniChallenge8" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="66" width="1015" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YKB-vk-K28" id="4Ml-qA-z5Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="1015" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mc capivara" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqZ-Py-Tke">
+                                                    <rect key="frame" x="171" y="44" width="598" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="52"/>
+                                                    <color key="textColor" red="1" green="0.83921568627450982" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xj-Ig-tY3">
+                                                    <rect key="frame" x="936" y="44" width="27" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="52"/>
+                                                    <color key="textColor" red="1" green="0.83921568629999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rapper2" translatesAutoresizingMaskIntoConstraints="NO" id="ZNj-Sw-6YR">
+                                                    <rect key="frame" x="30" y="23" width="106" height="106"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFq-GQ-dIH">
+                                                    <rect key="frame" x="30" y="142" width="965" height="5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.19607843137254902" green="0.15294117647058825" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playerImage" destination="ZNj-Sw-6YR" id="Egn-lJ-DNZ"/>
+                                            <outlet property="playerNameLabel" destination="vqZ-Py-Tke" id="D4R-Wp-acw"/>
+                                            <outlet property="playerPointsLabel" destination="9xj-Ig-tY3" id="Msf-mW-N1h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g6E-TO-hQ7">
+                                <rect key="frame" x="1478" y="931" width="332" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="40"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="continuar" backgroundImage="Button">
+                                    <color key="titleColor" red="0.14117647059999999" green="0.14117647059999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled" backgroundImage="InactiveButton"/>
+                                <connections>
+                                    <action selector="didPressStart:" destination="S8v-qt-fMu" eventType="primaryActionTriggered" id="NpL-Se-j3Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QI3-Bq-Nep" secondAttribute="bottom" id="0mb-Gt-Ph1"/>
+                            <constraint firstItem="QI3-Bq-Nep" firstAttribute="leading" secondItem="xWX-n3-zeL" secondAttribute="leading" id="4Y5-Je-JuS"/>
+                            <constraint firstAttribute="trailing" secondItem="QI3-Bq-Nep" secondAttribute="trailing" id="5b6-fE-zaY"/>
+                            <constraint firstItem="QI3-Bq-Nep" firstAttribute="top" secondItem="xWX-n3-zeL" secondAttribute="top" id="LZt-vm-YXI"/>
+                            <constraint firstItem="e2l-8o-Wsd" firstAttribute="top" secondItem="CwY-W7-6aj" secondAttribute="top" id="R7o-sd-a5c"/>
+                            <constraint firstItem="CwY-W7-6aj" firstAttribute="centerX" secondItem="xWX-n3-zeL" secondAttribute="centerX" id="b53-E5-TOZ"/>
+                            <constraint firstItem="CwY-W7-6aj" firstAttribute="width" secondItem="xWX-n3-zeL" secondAttribute="width" multiplier="0.3" id="kMD-6J-oc0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e2l-8o-Wsd"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="9yR-zo-gys" id="QlS-05-uyu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IBu-tj-kGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2745" y="3134"/>
+        </scene>
         <!--Battle Game View Controller-->
         <scene sceneID="DfE-b8-rGt">
             <objects>
@@ -342,7 +442,9 @@
         <image name="InactiveButton" width="390" height="92"/>
         <image name="Pre Battle" width="1920" height="1080"/>
         <image name="homeScreen" width="1920" height="1080"/>
+        <image name="leaderboard" width="1920" height="1080"/>
         <image name="rapper1" width="316" height="316"/>
+        <image name="rapper2" width="316" height="316"/>
         <image name="rapper4" width="316" height="316"/>
     </resources>
 </document>
