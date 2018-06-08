@@ -33,15 +33,19 @@ class Championship {
             self.feedbackPoint = 1
         }
         
-        for p1 in players {
-            var added: [Player] = []
-            for p2 in players {
-                if p1.peerID != p2.peerID && !(added.contains(where: { $0.peerID == p2.peerID })) {
-                    self.battles.append(Battle(player1: p1, player2: p2, championship: self))
-                    added.append(p2)
-                }
+        var aux: [Player] = self.players
+        aux.remove(at: 0)
+        
+        for p1 in self.players {
+            for p2 in aux {
+                self.battles.append(Battle(player1: p1, player2: p2, championship: self))
+            }
+            if aux.count != 0 {
+                aux.remove(at: 0)
             }
         }
+        
+        self.battles.shuffle()
     }
     
     func nextBattle() -> Battle {
@@ -49,4 +53,29 @@ class Championship {
         return self.battles[self.battleIndex + 1]
     }
     
+    func hasNotNextBattle() -> Bool {
+        return self.battles.count == self.battleIndex
+    }
+    
+}
+
+extension MutableCollection {
+    mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (firstUnshuffled, unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
+            let d: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            let i = index(firstUnshuffled, offsetBy: d)
+            swapAt(firstUnshuffled, i)
+        }
+    }
+}
+
+extension Sequence {
+    func shuffled() -> [Element] {
+        var result = Array(self)
+        result.shuffle()
+        return result
+    }
 }

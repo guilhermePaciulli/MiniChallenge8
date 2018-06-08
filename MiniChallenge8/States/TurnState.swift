@@ -56,13 +56,15 @@ class TurnState: State {
             self.didStartTurn = true
             self.ringDecreaseAnimation()
         })
+        
+        self.updatePercentages()
     }
     
     func ringDecreaseAnimation() {
         guard let shapeLayer = self.ringShapeLayer else { return }
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 15.0
+        animation.duration = 1.0
         animation.fromValue = 1
         animation.toValue = 0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
@@ -144,6 +146,10 @@ class TurnState: State {
     }
     
     func prepareTurnStateToEnd() {
+        if let data = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
+            MPHelper.shared.send(data: data, dataMode: .reliable)
+        }
+        
         self.didStartTurn = false
         
         var nextPlayer: Player!

@@ -23,6 +23,8 @@ class NextRoundState: State {
         } else if self.viewController.battle.player1Percentage < self.viewController.battle.player2Percentage {
             self.viewController.battle.rounds.last!.winner = self.viewController.battle.player2
         }
+        self.viewController.battle.player1Percentage = 50
+        self.viewController.battle.player2Percentage = 50
         
         if self.viewController.battle.rounds.count == 3 {
             self.viewController.moveTo(state: BattleWinnerState(viewController: viewController))
@@ -32,6 +34,7 @@ class NextRoundState: State {
             let secondRoundWinner = self.viewController.battle.rounds[1].winner,
             firstRoundWinner.peerID == secondRoundWinner.peerID {
             
+            self.viewController.battle.winner = firstRoundWinner
             self.viewController.moveTo(state: BattleWinnerState(viewController: viewController))
             return
         }
@@ -39,11 +42,11 @@ class NextRoundState: State {
         self.viewController.winnerLabel.alpha = 0
         self.viewController.currentStateLabel.alpha = 0
         
-        self.viewController.currentStateLabel.text = "acabou round!"
+        self.viewController.currentStateLabel.text = "acabou o round!"
         if let winnerName = self.viewController.battle.rounds.last?.winner?.name {
-            self.viewController.winnerLabel.text = "\(winnerName) ganhou esse round!"
+            self.viewController.winnerLabel.text = "\(winnerName) ganhou!"
         } else {
-            self.viewController.winnerLabel.text = "empate"
+            self.viewController.winnerLabel.text = "empate!"
         }
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveLinear, animations: {

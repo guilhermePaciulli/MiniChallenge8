@@ -84,6 +84,12 @@ class BattleGameViewController: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.audioPlayer.stop()
+        
+    }
+    
     func moveTo(state: State) {
         if let didExitState = self.currentState.didExitState { didExitState() }
         self.currentState = state

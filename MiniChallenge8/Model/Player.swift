@@ -18,10 +18,13 @@ class Player {
     
     var peerID: MCPeerID
     
+    var victories: Int
+    
     init(name: String, avatar: Avatar, peerID: MCPeerID) {
         self.name = name
         self.avatar = UIImage(named: avatar.rawValue)!
         self.peerID = peerID
+        self.victories = 0
     }
     
     func setAvatar(avatar: Avatar) {

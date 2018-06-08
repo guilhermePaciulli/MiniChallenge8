@@ -20,7 +20,7 @@
         <!--Connected Players View Controller-->
         <scene sceneID="uZk-n8-pfw">
             <objects>
-                <viewController id="S8v-qt-fMu" customClass="ConnectedPlayersViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="connectedPlayersViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="S8v-qt-fMu" customClass="ConnectedPlayersViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kHO-zW-wYu"/>
                         <viewControllerLayoutGuide type="bottom" id="Uve-DU-KCD"/>
@@ -207,7 +207,7 @@
         <!--Leaderboard View Controller-->
         <scene sceneID="mVE-w0-O7r">
             <objects>
-                <viewController id="3gs-Kx-seu" customClass="LeaderboardViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leaderboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3gs-Kx-seu" customClass="LeaderboardViewController" customModule="MiniChallenge8" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rq1-p1-2a1"/>
                         <viewControllerLayoutGuide type="bottom" id="KxQ-Nt-wJ1"/>
@@ -281,6 +281,7 @@
                                 </state>
                                 <state key="disabled" backgroundImage="InactiveButton"/>
                                 <connections>
+                                    <action selector="continueToNextBattle:" destination="3gs-Kx-seu" eventType="primaryActionTriggered" id="xlj-Io-GmN"/>
                                     <action selector="didPressStart:" destination="S8v-qt-fMu" eventType="primaryActionTriggered" id="NpL-Se-j3Q"/>
                                 </connections>
                             </button>
@@ -297,6 +298,7 @@
                         <viewLayoutGuide key="safeArea" id="e2l-8o-Wsd"/>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="g6E-TO-hQ7" id="WDv-Aa-3Pc"/>
                         <outlet property="tableView" destination="9yR-zo-gys" id="QlS-05-uyu"/>
                     </connections>
                 </viewController>

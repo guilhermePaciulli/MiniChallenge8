@@ -39,7 +39,7 @@ class StartTurnState: State {
     }
     
     func timerCountdown() {
-        if self.countdown == 0 {
+        if self.countdown == -1 {
             self.viewController.countdownLabel.text = "Valendo"
             Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
                 self.show(player: self.viewController.currentPlayer)
