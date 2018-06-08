@@ -39,7 +39,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
         MPHelper.shared.startAdvertesing()
         
         let appleTVPlayer = Player.init(name: "mc t-vos",
-                                        avatar: Avatar(rawValue: "rapper\((arc4random_uniform(5) + 1)).png")!,
+                                        avatar: Avatar(rawValue: "rapper\((arc4random_uniform(4) + 1)).png")!,
                                         peerID: MCPeerID.init(displayName: "Hey"))
         self.connectedPlayers.append(appleTVPlayer)
         self.updateStartButton()
@@ -80,6 +80,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     @IBAction func didPressStart(_ sender: Any) {
         if self.connectedPlayers.count >= self.minimumPlayers {
             if let preBattleViewController = self.storyboard?.instantiateViewController(withIdentifier: "preBattleViewController") as? PreBattleViewControllerTVOS {
+                self.connectedPlayers = self.connectedPlayers.filter({ $0.name != "conectando..." })
                 preBattleViewController.championship = Championship(players: self.connectedPlayers)
                 self.present(preBattleViewController, animated: true, completion: nil)
             }
@@ -87,10 +88,11 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     }
     
     func updateStartButton() {
-        if self.connectedPlayers.count < self.minimumPlayers {
+        let filtered = self.connectedPlayers.filter({ $0.name != "conectando..." })
+        if filtered.count < self.minimumPlayers {
             self.instructionsLabel.text = "use o app no iphone para entrar - mínimo são 3 jogadores"
             self.startButton.isEnabled = false
-        } else if self.connectedPlayers.count <= 6 {
+        } else if filtered.count <= 6 {
             self.instructionsLabel.text = "use o app no iphone para entrar"
             self.startButton.isEnabled = true
         } else {
@@ -134,7 +136,7 @@ extension ConnectedPlayersViewController: ConnectionDelegate {
     func isConnecting(to peerID: MCPeerID) {}
     
     func didEstablishConnection(with peerID: MCPeerID) {
-        let notDefinedPlayer = Player(name: "conectando", avatar: .notDefined, peerID: peerID)
+        let notDefinedPlayer = Player(name: "conectando...", avatar: .notDefined, peerID: peerID)
         self.connectedPlayers.append(notDefinedPlayer)
         
         if let editCharData = try? JSONEncoder().encode(DisplayScreen(screen: .characterEditing)) {
