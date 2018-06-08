@@ -8,6 +8,7 @@
 
 import UIKit
 import MultipeerConnectivity
+import AVFoundation
 
 class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
@@ -23,6 +24,8 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     
     let minimumPlayers = 2
     
+    var audioPlayer = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         MPHelper.shared.receiverDelegate = self
         MPHelper.shared.connectionDelegate = self
         MPHelper.shared.startAdvertesing()
@@ -43,6 +47,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
                                         peerID: MCPeerID.init(displayName: "Hey"))
         self.connectedPlayers.append(appleTVPlayer)
         self.updateStartButton()
+        self.playSong()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -80,6 +85,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     @IBAction func didPressStart(_ sender: Any) {
         if self.connectedPlayers.count >= self.minimumPlayers {
             if let preBattleViewController = self.storyboard?.instantiateViewController(withIdentifier: "preBattleViewController") as? PreBattleViewControllerTVOS {
+                preBattleViewController.audioPlayer = self.audioPlayer
                 self.connectedPlayers = self.connectedPlayers.filter({ $0.name != "conectando..." })
                 preBattleViewController.championship = Championship(players: self.connectedPlayers)
                 self.present(preBattleViewController, animated: true, completion: nil)
@@ -127,6 +133,20 @@ extension ConnectedPlayersViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: self.view.frame.size.width / 7, height: self.view.frame.size.width / 7)
     }
+    
+    func playSong(){
+        let sound = URL(fileURLWithPath: Bundle.main.path(forResource: "beat02-tvOS", ofType: "mp3")!)
+        do{
+            self.audioPlayer = try AVAudioPlayer(contentsOf: sound)
+            self.audioPlayer.prepareToPlay()
+        }catch{
+            print("problem in playing music")
+        }
+        self.audioPlayer.play()
+        self.audioPlayer.volume = 0.25
+        self.audioPlayer.numberOfLoops = -1
+    }
+    
 }
 
 extension ConnectedPlayersViewController: ConnectionDelegate {

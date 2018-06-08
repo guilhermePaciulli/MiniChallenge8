@@ -8,6 +8,7 @@
 
 import UIKit
 import MultipeerConnectivity
+import AVFoundation
 
 class PreBattleViewControllerTVOS: UIViewController {
 
@@ -29,6 +30,8 @@ class PreBattleViewControllerTVOS: UIViewController {
     var playerNotChosen: Player!
     
     var playerToStart: Player?
+    
+    var audioPlayer:AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +92,7 @@ class PreBattleViewControllerTVOS: UIViewController {
             if let battleViewController = self.storyboard?.instantiateViewController(withIdentifier: "battleViewController") as? BattleGameViewController {
                 battleViewController.currentPlayer = playerToStart
                 battleViewController.battle = self.currentBattle
+                self.audioPlayer.stop()
                 self.present(battleViewController, animated: true, completion: nil)
             }
         }
