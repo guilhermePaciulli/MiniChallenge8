@@ -10,7 +10,7 @@ import Foundation
 
 class Round {
     
-    var turns: [Turn] = []
+    var turns: Int = 0
     
     var winner: Player?
     

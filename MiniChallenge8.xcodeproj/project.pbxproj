@@ -22,10 +22,9 @@
 		BD6DB4B420BE250400F8ABDE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B320BE250400F8ABDE /* State.swift */; };
 		BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4B520BE28F600F8ABDE /* MPServices.swift */; };
 		BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */; };
-		BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */; };
 		BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */; };
 		BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */; };
-		BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */; };
+		BD6DB4CE20BE366400F8ABDE /* StartTurnState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4CD20BE366400F8ABDE /* StartTurnState.swift */; };
 		BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D220BEDEA900F8ABDE /* Player.swift */; };
 		BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */; };
 		BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7799C620BEE5DF0081C42F /* Battle.swift */; };
@@ -113,10 +112,9 @@
 		BD6DB4B320BE250400F8ABDE /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		BD6DB4B520BE28F600F8ABDE /* MPServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPServices.swift; sourceTree = "<group>"; };
 		BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnState.swift; sourceTree = "<group>"; };
-		BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundWinnerState.swift; sourceTree = "<group>"; };
 		BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRoundState.swift; sourceTree = "<group>"; };
 		BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWinnerState.swift; sourceTree = "<group>"; };
-		BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartBattleState.swift; sourceTree = "<group>"; };
+		BD6DB4CD20BE366400F8ABDE /* StartTurnState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTurnState.swift; sourceTree = "<group>"; };
 		BD6DB4D220BEDEA900F8ABDE /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BD6DB4D520BEE11D00F8ABDE /* BattleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleGameViewController.swift; sourceTree = "<group>"; };
 		BD7799C620BEE5DF0081C42F /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
@@ -284,9 +282,8 @@
 			isa = PBXGroup;
 			children = (
 				BD6DB4B320BE250400F8ABDE /* State.swift */,
-				BD6DB4CD20BE366400F8ABDE /* StartBattleState.swift */,
+				BD6DB4CD20BE366400F8ABDE /* StartTurnState.swift */,
 				BD6DB4BD20BE2B8200F8ABDE /* TurnState.swift */,
-				BD6DB4BF20BE2B9600F8ABDE /* RoundWinnerState.swift */,
 				BD6DB4C120BE2BA100F8ABDE /* NextRoundState.swift */,
 				BD6DB4CA20BE362D00F8ABDE /* BattleWinnerState.swift */,
 			);
@@ -627,7 +624,6 @@
 			files = (
 				BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */,
 				BD7799CB20BEE6550081C42F /* Turn.swift in Sources */,
-				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
 				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
 				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
 				BD6DB4B220BE1B8400F8ABDE /* MPHelper.swift in Sources */,
@@ -636,7 +632,7 @@
 				BD7799EC20C1D7600081C42F /* ConnectedPlayersViewController.swift in Sources */,
 				BD6DB4BE20BE2B8200F8ABDE /* TurnState.swift in Sources */,
 				BD7799C720BEE5DF0081C42F /* Battle.swift in Sources */,
-				BD6DB4CE20BE366400F8ABDE /* StartBattleState.swift in Sources */,
+				BD6DB4CE20BE366400F8ABDE /* StartTurnState.swift in Sources */,
 				BD6DB4CB20BE362D00F8ABDE /* BattleWinnerState.swift in Sources */,
 				BD91F25E20C2F323004E28D8 /* ConnectedPlayersView.swift in Sources */,
 				BD6DB4D320BEDEA900F8ABDE /* Player.swift in Sources */,

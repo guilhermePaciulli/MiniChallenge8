@@ -24,10 +24,28 @@ class TurnState: State {
     
     func didEnterState() {
         
-        if let datum = try? JSONEncoder().encode(DisplayScreen(screen: .feedbackView)) {
-            let playersPeerIDs = self.viewController.battle.championship.players.filter({ $0.peerID != self.viewController.battle.player1.peerID && $0.peerID != self.viewController.battle.player2.peerID })
-//            let playersPeerIDs = self.viewController.battle.championship.players.filter({ $0.peerID != self.viewController.currentPlayer.peerID })
-            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersPeerIDs.map({ return $0.peerID }))
+        if let datum = try? JSONEncoder().encode(DisplayScreen(screen: .feedbackView)),
+            let notDatum = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
+            
+//            let playersFeedbackingPeerIDs = self.viewController.battle.championship.players.filter({
+//                $0.peerID != self.viewController.battle.player1.peerID && $0.peerID != self.viewController.battle.player2.peerID
+//            })
+//
+//            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
+//                $0.peerID == self.viewController.battle.player1.peerID || $0.peerID == self.viewController.battle.player2.peerID
+//            })
+            
+            let playersFeedbackingPeerIDs = self.viewController.battle.championship.players.filter({
+                $0.peerID != self.viewController.currentPlayer.peerID
+            })
+
+            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
+                $0.peerID == self.viewController.currentPlayer.peerID
+            })
+
+            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
+            MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
+            
         }
         
         self.viewController.ringView.alpha = 0
@@ -40,16 +58,6 @@ class TurnState: State {
         })
     }
     
-    func didExitState() {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.viewController.ringView.alpha = 0
-        }, completion: { _ in
-            self.didStartTurn = false
-        })
-        
-        //Posicionar personagem
-    }
-    
     func ringDecreaseAnimation() {
         guard let shapeLayer = self.ringShapeLayer else { return }
         
@@ -58,10 +66,14 @@ class TurnState: State {
         animation.fromValue = 1
         animation.toValue = 0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.delegate = self.viewController
         shapeLayer.strokeEnd = 1.0
         shapeLayer.add(animation, forKey: "animateCircle")
         shapeLayer.animation(forKey: "animateCircle")
-
+        
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: { _ in
+            self.timesLikedInSecond = 0
+        })
     }
     
     func drawRingFittingInside(view: UIView) -> CAShapeLayer {
@@ -86,17 +98,26 @@ class TurnState: State {
         return shapeLayer
     }
     
+    var timesLikedInSecond = 0
+    var numberOfBonusTimes = 0
+    
     func updateRemainingTime() {
-        self.ringShapeLayer?.timeOffset = (self.ringShapeLayer?.convertTime(CACurrentMediaTime(), from: nil))!
-        self.ringShapeLayer?.beginTime = CACurrentMediaTime()
-        self.ringShapeLayer?.speed /= 20
+        self.timesLikedInSecond += 1
+        
+        if self.timesLikedInSecond >= self.viewController.battle.championship.players.count * 3 && self.numberOfBonusTimes < 4 {
+            self.ringShapeLayer?.timeOffset = (self.ringShapeLayer?.convertTime(CACurrentMediaTime(), from: nil))!
+            self.ringShapeLayer?.beginTime = CACurrentMediaTime()
+            self.ringShapeLayer?.speed /= 4/3
+            self.timesLikedInSecond = 0
+            self.numberOfBonusTimes += 1
+        }
     }
     
     func updatePercentages() {
         self.viewController.battle.addPercentageTo(player: self.viewController.currentPlayer)
         
-        self.viewController.player1PercentageLabel.text = "\(self.viewController.battle.player1Percentage)%"
-        self.viewController.player2PercentageLabel.text = "\(self.viewController.battle.player2Percentage)%"
+        self.viewController.player1PercentageLabel.text = "\(Int(self.viewController.battle.player1Percentage))%"
+        self.viewController.player2PercentageLabel.text = "\(Int(self.viewController.battle.player2Percentage))%"
         
         DispatchQueue.main.async {
             let oldValue = self.viewController.player1Bar.frame.size.width
@@ -116,6 +137,50 @@ class TurnState: State {
             self.updateRemainingTime()
             self.updatePercentages()
         }
+    }
+    
+    func animationDidStop(_ animation: CAAnimation) {
+        self.ringShapeLayer?.removeFromSuperlayer()
+        self.prepareTurnStateToEnd()
+    }
+    
+    func prepareTurnStateToEnd() {
+        self.didStartTurn = false
+        
+        var nextPlayer: Player!
+        var currentPlayerAvatar: UIImageView!
+        var currentPlayerSize: CGSize!
+        var currentPlayerOrigin: CGPoint!
+        
+        if self.viewController.currentPlayer.peerID == self.viewController.battle.player1.peerID {
+            
+            nextPlayer = self.viewController.battle.player2
+            currentPlayerAvatar = self.viewController.player1Avatar
+            currentPlayerOrigin = self.viewController.playerAvatarOrigins[self.viewController.battle.player1.peerID]
+            currentPlayerSize = self.viewController.playerAvatarSizes[self.viewController.battle.player1.peerID]
+            
+        } else if self.viewController.currentPlayer.peerID == self.viewController.battle.player2.peerID {
+            
+            nextPlayer = self.viewController.battle.player1
+            currentPlayerAvatar = self.viewController.player2Avatar
+            currentPlayerOrigin = self.viewController.playerAvatarOrigins[self.viewController.battle.player2.peerID]
+            currentPlayerSize = self.viewController.playerAvatarSizes[self.viewController.battle.player2.peerID]
+            
+        }
+        
+        
+        self.viewController.currentPlayer = nextPlayer
+        UIView.animate(withDuration: 1, animations: {
+            currentPlayerAvatar.frame.origin = currentPlayerOrigin
+            currentPlayerAvatar.frame.size = currentPlayerSize
+        }, completion: { _ in
+            self.viewController.battle.rounds.last!.turns += 1
+            if self.viewController.battle.rounds.last!.turns == 2 {
+                self.viewController.moveTo(state: NextRoundState(viewController: self.viewController))
+            } else {
+                self.viewController.moveTo(state: StartTurnState(viewController: self.viewController))
+            }
+        })
     }
     
 }

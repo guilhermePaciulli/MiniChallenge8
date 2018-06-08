@@ -9,14 +9,5 @@
 import Foundation
 
 class Turn {
-        
-    var player: Player
-    
-    var score: Int
-    
-    init(player: Player) {
-        self.player = player
-        self.score = 0
-    }
     
 }

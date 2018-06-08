@@ -32,6 +32,10 @@ class BattleGameViewController: UIViewController {
     var currentState: State!
     
     var currentPlayer: Player!
+    
+    var playerAvatarOrigins: [MCPeerID: CGPoint]!
+    
+    var playerAvatarSizes: [MCPeerID: CGSize]!
         
     var battle: Battle!
     
@@ -44,7 +48,13 @@ class BattleGameViewController: UIViewController {
         super.viewWillAppear(animated)
         MPHelper.shared.receiverDelegate = self
         
-        self.currentState = StartBattleState(viewController: self)
+        self.playerAvatarOrigins = [self.battle.player1.peerID: self.player1Avatar.frame.origin,
+                                    self.battle.player2.peerID: self.player2Avatar.frame.origin]
+        
+        self.playerAvatarSizes = [self.battle.player1.peerID: self.player1Avatar.frame.size,
+                                  self.battle.player2.peerID: self.player2Avatar.frame.size]
+        
+        self.currentState = StartTurnState(viewController: self)
         if let willEnterState = self.currentState.willEnterState { willEnterState() }
         
         self.playSong()
@@ -86,6 +96,14 @@ extension BattleGameViewController: ReceiverDelegate {
     }
     
     func receive(error: Error) {}
+    
+}
+
+extension BattleGameViewController: CAAnimationDelegate {
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag { if let animationDidStop = self.currentState.animationDidStop { animationDidStop(anim) } }
+    }
     
 }
 

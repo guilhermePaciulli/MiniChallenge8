@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MultipeerConnectivity
 
 class ReactionViewController: UIViewController {
     
@@ -25,4 +26,18 @@ class ReactionViewController: UIViewController {
         MPHelper.shared.send(data: self.feedbackStructData, dataMode: .reliable)
     }
 
+}
+
+extension ReactionViewController: ReceiverDelegate {
+    
+    func receive(data: Data, from peer: MCPeerID) {
+        if let screen = try? JSONDecoder().decode(DisplayScreen.self, from: data), screen.screen == .waiting {
+            if let waitingViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
+                self.present(waitingViewController, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func receive(error: Error) { }
+    
 }

@@ -119,16 +119,9 @@ class ChooseCharacterViewController: UIViewController, UICollectionViewDataSourc
 extension ChooseCharacterViewController: ReceiverDelegate {
     
     func receive(data: Data, from peer: MCPeerID) {
-        if let screenToBeDisplayed = try? JSONDecoder().decode(DisplayScreen.self, from: data) {
-            switch screenToBeDisplayed.screen {
-            case .waiting:
-                if let waitingViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
-                    self.present(waitingViewController, animated: true, completion: nil)
-                }
-            case .characterEditing, .chooseStarter:
-                break
-            case .feedbackView:
-                break
+        if let screenToBeDisplayed = try? JSONDecoder().decode(DisplayScreen.self, from: data), screenToBeDisplayed.screen == .waiting {
+            if let waitingViewController = self.storyboard?.instantiateViewController(withIdentifier: "waitingViewController") {
+                self.present(waitingViewController, animated: true, completion: nil)
             }
         }
     }
