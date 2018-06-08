@@ -30,31 +30,9 @@ class StartTurnState: State {
     }
     
     func didEnterState() {
-        let numberOfRounds = self.viewController.battle.rounds.count
-        
-        switch numberOfRounds {
-        case 0, 1:
+        if self.viewController.battle.rounds.count == 0 {
             self.viewController.battle.rounds.append(Round())
-            self.nextTurn()
-        case 2:
-            let firstRound = self.viewController.battle.rounds[0].winner
-            let secondRound = self.viewController.battle.rounds[1].winner
-            
-            if firstRound?.peerID == secondRound?.peerID {
-                // Show Winner State
-                return
-            }
-            self.viewController.battle.rounds.append(Round())
-            self.nextTurn()
-        case 3:
-            // Show Winner State
-            return
-        default:
-            break
         }
-    }
-    
-    func nextTurn() {
         self.countdown = 4
         self.viewController.countdownLabel.text = "5"
         self.timerCountdown()

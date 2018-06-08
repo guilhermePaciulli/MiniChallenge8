@@ -27,21 +27,21 @@ class TurnState: State {
         if let datum = try? JSONEncoder().encode(DisplayScreen(screen: .feedbackView)),
             let notDatum = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
             
-//            let playersFeedbackingPeerIDs = self.viewController.battle.championship.players.filter({
-//                $0.peerID != self.viewController.battle.player1.peerID && $0.peerID != self.viewController.battle.player2.peerID
-//            })
-//
-//            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
-//                $0.peerID == self.viewController.battle.player1.peerID || $0.peerID == self.viewController.battle.player2.peerID
-//            })
-            
             let playersFeedbackingPeerIDs = self.viewController.battle.championship.players.filter({
-                $0.peerID != self.viewController.currentPlayer.peerID
+                $0.peerID != self.viewController.battle.player1.peerID && $0.peerID != self.viewController.battle.player2.peerID
             })
 
             let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
-                $0.peerID == self.viewController.currentPlayer.peerID
+                $0.peerID == self.viewController.battle.player1.peerID || $0.peerID == self.viewController.battle.player2.peerID
             })
+            
+//            let playersFeedbackingPeerIDs = self.viewController.battle.championship.players.filter({
+//                $0.peerID != self.viewController.currentPlayer.peerID
+//            })
+//
+//            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
+//                $0.peerID == self.viewController.currentPlayer.peerID
+//            })
 
             MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
             MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
@@ -114,26 +114,25 @@ class TurnState: State {
     }
     
     func updatePercentages() {
-        self.viewController.battle.addPercentageTo(player: self.viewController.currentPlayer)
-        
         self.viewController.player1PercentageLabel.text = "\(Int(self.viewController.battle.player1Percentage))%"
         self.viewController.player2PercentageLabel.text = "\(Int(self.viewController.battle.player2Percentage))%"
         
-        DispatchQueue.main.async {
-            let oldValue = self.viewController.player1Bar.frame.size.width
-            self.viewController.player1Bar.frame.size.width = CGFloat(self.viewController.barWidth) * CGFloat(self.viewController.battle.player1Percentage) / 50
-            self.viewController.player2Bar.frame.size.width = CGFloat(self.viewController.barWidth) * CGFloat(self.viewController.battle.player2Percentage) / 50
-            if self.viewController.currentPlayer.peerID == self.viewController.battle.player1.peerID {
-                self.viewController.player1Bar.frame.origin.x -= abs(oldValue - self.viewController.player1Bar.frame.size.width)
-            } else {
-                self.viewController.player1Bar.frame.origin.x += abs(oldValue - self.viewController.player1Bar.frame.size.width)
-            }
-        }
+//        DispatchQueue.main.async {
+//            let oldValue = self.viewController.player1Bar.frame.size.width
+//            self.viewController.player1Bar.frame.size.width = CGFloat(self.viewController.barWidth) * CGFloat(self.viewController.battle.player1Percentage) / 50
+//            self.viewController.player2Bar.frame.size.width = CGFloat(self.viewController.barWidth) * CGFloat(self.viewController.battle.player2Percentage) / 50
+//            if self.viewController.currentPlayer.peerID == self.viewController.battle.player1.peerID {
+//                self.viewController.player1Bar.frame.origin.x -= abs(oldValue - self.viewController.player1Bar.frame.size.width)
+//            } else {
+//                self.viewController.player1Bar.frame.origin.x += abs(oldValue - self.viewController.player1Bar.frame.size.width)
+//            }
+//        }
         
     }
     
     func didReceive(data: Data, from peerID: MCPeerID) {
         if (try? JSONDecoder().decode(FeedbackStruct.self, from: data)) != nil {
+            self.viewController.battle.addPercentageTo(player: self.viewController.currentPlayer)
             self.updateRemainingTime()
             self.updatePercentages()
         }

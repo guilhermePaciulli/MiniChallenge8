@@ -26,6 +26,10 @@ class BattleGameViewController: UIViewController {
     
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var ringView: UIView!
+
+    @IBOutlet weak var currentStateLabel: UILabel!
+    @IBOutlet weak var winnerLabel: UILabel!
+
     
     var audioPlayer = AVAudioPlayer()
     

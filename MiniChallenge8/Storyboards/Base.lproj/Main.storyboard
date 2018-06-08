@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3gs-Kx-seu">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -320,6 +320,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-Ds-OZZ">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="180"/>
+                                <color key="textColor" red="1" green="0.83921568629999999" blue="0.39652104329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwj-Um-CS1">
                                 <rect key="frame" x="54" y="36" width="864" height="72"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="60"/>
@@ -340,7 +346,7 @@
                                     <constraint firstAttribute="height" constant="74" id="tui-8i-G53"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-UI-G1t">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhC-UI-G1t">
                                 <rect key="frame" x="967" y="120" width="320" height="15"/>
                                 <color key="backgroundColor" red="1" green="0.61176470588235299" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -348,7 +354,7 @@
                                     <constraint firstAttribute="height" constant="15" id="FKr-Fd-JKF"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPX-dz-1K5">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPX-dz-1K5">
                                 <rect key="frame" x="633" y="120" width="320" height="15"/>
                                 <color key="backgroundColor" red="1" green="0.61176470588235299" blue="0.31764705882352939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -372,21 +378,27 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-LM-gHs">
-                                <rect key="frame" x="625" y="140" width="320" height="48"/>
+                                <rect key="frame" x="625" y="105" width="320" height="48"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="40"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBe-2P-fVF">
-                                <rect key="frame" x="975" y="140" width="320" height="48"/>
+                                <rect key="frame" x="975" y="105" width="320" height="48"/>
                                 <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="40"/>
                                 <color key="textColor" red="0.99215686270000003" green="0.83137254900000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1OB-Ds-OZZ">
-                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
-                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="180"/>
-                                <color key="textColor" red="1" green="0.83921568629999999" blue="0.39652104329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current state label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IT4-Qt-lWW">
+                                <rect key="frame" x="0.0" y="632" width="1920" height="140"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="60"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="winner label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UF4-Xg-wnt">
+                                <rect key="frame" x="0.0" y="820" width="1920" height="184"/>
+                                <fontDescription key="fontDescription" name="PricedownBl-Regular" family="Pricedown" pointSize="110"/>
+                                <color key="textColor" red="0.99607843139999996" green="0.83529411760000005" blue="0.36470588240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -397,22 +409,30 @@
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="top" secondItem="kjm-9H-MDO" secondAttribute="top" constant="24" id="5q9-a0-BUb"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="leading" secondItem="Uwj-Um-CS1" secondAttribute="leading" constant="36" id="8iw-GD-Qp9"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="CNO-BD-O49"/>
+                            <constraint firstItem="IT4-Qt-lWW" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.13" id="CY7-Vv-6PL"/>
                             <constraint firstItem="hhC-UI-G1t" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="60" id="DjO-h3-SWE"/>
+                            <constraint firstItem="UF4-Xg-wnt" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" id="Hn6-LL-KVg"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="width" secondItem="hhC-UI-G1t" secondAttribute="width" id="KeO-zG-HYH"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" id="Kpv-aB-KWf"/>
-                            <constraint firstItem="QBe-2P-fVF" firstAttribute="top" secondItem="hhC-UI-G1t" secondAttribute="bottom" constant="5" id="LTQ-Zr-ubc"/>
+                            <constraint firstItem="QBe-2P-fVF" firstAttribute="top" secondItem="hhC-UI-G1t" secondAttribute="bottom" constant="-30" id="LTQ-Zr-ubc"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="leading" secondItem="uPX-dz-1K5" secondAttribute="trailing" id="Lpn-QP-H2y"/>
                             <constraint firstItem="kjm-9H-MDO" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" multiplier="0.45" id="LxE-o1-iea"/>
                             <constraint firstItem="kjm-9H-MDO" firstAttribute="trailing" secondItem="Ppa-VW-rKa" secondAttribute="trailing" constant="28" id="MpZ-MQ-UBd"/>
+                            <constraint firstItem="IT4-Qt-lWW" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" multiplier="1.3" id="NiX-Pw-Mlj"/>
                             <constraint firstItem="yLg-Xm-xPH" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="30" id="Q3c-Ir-xGD"/>
+                            <constraint firstItem="IT4-Qt-lWW" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" id="RQk-wr-RD9"/>
                             <constraint firstItem="Ppa-VW-rKa" firstAttribute="top" secondItem="Uwj-Um-CS1" secondAttribute="top" constant="24" id="Sbq-I0-4f8"/>
+                            <constraint firstItem="UF4-Xg-wnt" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" id="Sna-Ue-z5Q"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="centerY" secondItem="Ppa-VW-rKa" secondAttribute="centerY" id="TZi-wB-Qbo"/>
+                            <constraint firstItem="UF4-Xg-wnt" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" multiplier="0.17" id="X9Z-XY-esL"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" id="Z1p-9h-WHR"/>
                             <constraint firstItem="Uwj-Um-CS1" firstAttribute="width" secondItem="tXe-uJ-mPw" secondAttribute="width" multiplier="0.45" id="bcT-ao-01Y"/>
                             <constraint firstItem="pYw-re-msn" firstAttribute="centerX" secondItem="tXe-uJ-mPw" secondAttribute="centerX" id="bnm-WE-BB0"/>
                             <constraint firstItem="QBe-2P-fVF" firstAttribute="leading" secondItem="yLg-Xm-xPH" secondAttribute="trailing" constant="8" id="c74-yY-jJT"/>
                             <constraint firstItem="X0q-LM-gHs" firstAttribute="width" secondItem="QBe-2P-fVF" secondAttribute="width" id="i9A-Vd-RGr"/>
-                            <constraint firstItem="X0q-LM-gHs" firstAttribute="top" secondItem="uPX-dz-1K5" secondAttribute="bottom" constant="5" id="j9w-AV-1eZ"/>
+                            <constraint firstItem="X0q-LM-gHs" firstAttribute="top" secondItem="uPX-dz-1K5" secondAttribute="bottom" constant="-30" id="j9w-AV-1eZ"/>
+                            <constraint firstItem="UF4-Xg-wnt" firstAttribute="bottom" secondItem="IT4-Qt-lWW" secondAttribute="bottom" multiplier="1.3" id="nFC-H8-Ax3"/>
+                            <constraint firstItem="IT4-Qt-lWW" firstAttribute="centerX" secondItem="Ppa-VW-rKa" secondAttribute="centerX" id="ncm-Gu-9Cu"/>
                             <constraint firstItem="1OB-Ds-OZZ" firstAttribute="height" secondItem="tXe-uJ-mPw" secondAttribute="height" id="pXV-H9-Fmf"/>
                             <constraint firstItem="uPX-dz-1K5" firstAttribute="top" secondItem="Ppa-VW-rKa" secondAttribute="top" constant="60" id="qt1-9f-GdR"/>
                         </constraints>
@@ -420,6 +440,7 @@
                     </view>
                     <connections>
                         <outlet property="countdownLabel" destination="1OB-Ds-OZZ" id="QP2-Rc-41K"/>
+                        <outlet property="currentStateLabel" destination="IT4-Qt-lWW" id="Ahu-dq-7dS"/>
                         <outlet property="player1Avatar" destination="xP9-3t-e9f" id="JRH-pY-9cQ"/>
                         <outlet property="player1Bar" destination="uPX-dz-1K5" id="jdn-ud-7RK"/>
                         <outlet property="player1NameLabel" destination="Uwj-Um-CS1" id="hX2-yl-61N"/>
@@ -429,6 +450,7 @@
                         <outlet property="player2NameLabel" destination="kjm-9H-MDO" id="Qxz-iB-inj"/>
                         <outlet property="player2PercentageLabel" destination="QBe-2P-fVF" id="OsB-1D-6cd"/>
                         <outlet property="ringView" destination="pYw-re-msn" id="nOu-1U-KOB"/>
+                        <outlet property="winnerLabel" destination="UF4-Xg-wnt" id="AH9-nI-24l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCv-EN-vNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
