@@ -35,7 +35,6 @@ enum Avatar: String, Codable {
     case rapper2 = "rapper2.png"
     case rapper3 = "rapper3.png"
     case rapper4 = "rapper4.png"
-    case rapper5 = "rapper5.png"
     
     case notDefined = "unknown-user.png"
 }

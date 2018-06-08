@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14109" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="S8v-qt-fMu">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -135,7 +135,7 @@
                                     <action selector="didPressStart:" destination="S8v-qt-fMu" eventType="primaryActionTriggered" id="BL5-vz-TEH"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper5" translatesAutoresizingMaskIntoConstraints="NO" id="SCx-63-0cH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rapper1" translatesAutoresizingMaskIntoConstraints="NO" id="SCx-63-0cH">
                                 <rect key="frame" x="250" y="273" width="296" height="296"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SCx-63-0cH" secondAttribute="height" multiplier="1:1" id="era-UN-mUb"/>
@@ -342,7 +342,7 @@
         <image name="InactiveButton" width="390" height="92"/>
         <image name="Pre Battle" width="1920" height="1080"/>
         <image name="homeScreen" width="1920" height="1080"/>
-        <image name="rapper4" width="227" height="227"/>
-        <image name="rapper5" width="227" height="227"/>
+        <image name="rapper1" width="316" height="316"/>
+        <image name="rapper4" width="316" height="316"/>
     </resources>
 </document>

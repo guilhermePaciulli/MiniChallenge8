@@ -20,8 +20,7 @@ class ChooseCharacterViewController: UIViewController, UICollectionViewDataSourc
     private var characters: [AvatarOptions] = [AvatarOptions.init(avatar: .rapper1, image: UIImage.init(named: "rapper1.png")!),
                                                AvatarOptions.init(avatar: .rapper2, image: UIImage.init(named: "rapper2.png")!),
                                                AvatarOptions.init(avatar: .rapper3, image: UIImage.init(named: "rapper3.png")!),
-                                               AvatarOptions.init(avatar: .rapper4, image: UIImage.init(named: "rapper4.png")!),
-                                               AvatarOptions.init(avatar: .rapper5, image: UIImage.init(named: "rapper5.png")!)]
+                                               AvatarOptions.init(avatar: .rapper4, image: UIImage.init(named: "rapper4.png")!)]
     
     var selectedCharacter: Avatar = .rapper1
     
