@@ -15,6 +15,7 @@ import MultipeerConnectivity
     @objc optional func willEnterState()
     @objc optional func didEnterState()
     @objc optional func didExitState()
+    @objc optional func didReceiveFeedbackFromTV()
     @objc optional func didPressMainButton()
     @objc optional func didReceive(data: Data, from peerID: MCPeerID)
     @objc optional func animationDidStop(_ animation: CAAnimation)

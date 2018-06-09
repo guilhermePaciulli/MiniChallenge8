@@ -26,10 +26,10 @@ class BattleGameViewController: UIViewController {
     
     @IBOutlet weak var countdownLabel: UILabel!
     @IBOutlet weak var ringView: UIView!
-
+    
     @IBOutlet weak var currentStateLabel: UILabel!
     @IBOutlet weak var winnerLabel: UILabel!
-
+    
     
     var audioPlayer = AVAudioPlayer()
     
@@ -42,12 +42,13 @@ class BattleGameViewController: UIViewController {
     var playerAvatarOrigins: [MCPeerID: CGPoint]!
     
     var playerAvatarSizes: [MCPeerID: CGSize]!
-        
+    
     var battle: Battle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.barWidth = self.player1Bar.frame.size.width
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,11 +70,11 @@ class BattleGameViewController: UIViewController {
     
     func playSong(){
         let sound = URL(fileURLWithPath: Bundle.main.path(forResource: "beat01-tvOS", ofType: "mp3")!)
-            do{
-                self.audioPlayer = try AVAudioPlayer(contentsOf: sound)
-                self.audioPlayer.prepareToPlay()
-            }catch{
-                print("problem in playing music")
+        do{
+            self.audioPlayer = try AVAudioPlayer(contentsOf: sound)
+            self.audioPlayer.prepareToPlay()
+        }catch{
+            print("problem in playing music")
         }
         self.audioPlayer.play()
         self.audioPlayer.volume = 0.5
@@ -98,7 +99,20 @@ class BattleGameViewController: UIViewController {
         if let willEnterState = self.currentState.willEnterState { willEnterState() }
         if let didEnterState = self.currentState.didEnterState { didEnterState() }
     }
+    
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        for press in presses {
+            if (press.type == .select) {
+                if (self.battle.player1.peerID.displayName != "Hey") && (self.battle.player2.peerID.displayName != "Hey") {
+                    if let didReceiveFeedbackFromTV = self.currentState.didReceiveFeedbackFromTV{ didReceiveFeedbackFromTV() }
+                }
+            }else {
+                super.pressesEnded(presses, with: event)
+            }
+        }
+    }
 
+    
 }
 
 extension BattleGameViewController: ReceiverDelegate {
