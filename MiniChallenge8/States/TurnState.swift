@@ -62,11 +62,17 @@ class TurnState: State {
         self.updatePercentages()
     }
     
+    func didReceiveFeedbackFromTV() {
+        self.viewController.battle.addPercentageTo(player: self.viewController.currentPlayer)
+        self.updatePercentages()
+        self.updateRemainingTime()
+    }
+    
     func ringDecreaseAnimation() {
         guard let shapeLayer = self.ringShapeLayer else { return }
         
         let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.duration = 1.0
+        animation.duration = 10.0
         animation.fromValue = 1
         animation.toValue = 0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
