@@ -37,6 +37,8 @@ class BattleGameViewController: UIViewController {
     
     var currentPlayer: Player!
     
+    var starterPlayer: Player!
+    
     var playerAvatarOrigins: [MCPeerID: CGPoint]!
     
     var playerAvatarSizes: [MCPeerID: CGSize]!

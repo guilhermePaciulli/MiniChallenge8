@@ -50,11 +50,11 @@ class Championship {
     
     func nextBattle() -> Battle {
         self.battleIndex += 1
-        return self.battles[self.battleIndex + 1]
+        return self.battles[self.battleIndex]
     }
     
     func hasNotNextBattle() -> Bool {
-        return self.battles.count == self.battleIndex
+        return self.battles.count == self.battleIndex + 1
     }
     
 }
@@ -69,13 +69,5 @@ extension MutableCollection {
             let i = index(firstUnshuffled, offsetBy: d)
             swapAt(firstUnshuffled, i)
         }
-    }
-}
-
-extension Sequence {
-    func shuffled() -> [Element] {
-        var result = Array(self)
-        result.shuffle()
-        return result
     }
 }

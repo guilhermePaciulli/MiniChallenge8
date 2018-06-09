@@ -22,6 +22,11 @@ class ReactionViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MPHelper.shared.receiverDelegate = self
+    }
+    
     @objc func didReact() {
         MPHelper.shared.send(data: self.feedbackStructData, dataMode: .reliable)
     }

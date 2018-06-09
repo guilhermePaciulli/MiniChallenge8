@@ -37,7 +37,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        MPHelper.shared.leaveSession()
         MPHelper.shared.receiverDelegate = self
         MPHelper.shared.connectionDelegate = self
         MPHelper.shared.startAdvertesing()

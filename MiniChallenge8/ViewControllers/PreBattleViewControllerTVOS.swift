@@ -80,6 +80,7 @@ class PreBattleViewControllerTVOS: UIViewController {
         if let displayScreenData = try? JSONEncoder().encode(DisplayScreen(screen: .chooseStarter)) {
             MPHelper.shared.send(data: displayScreenData, dataMode: .reliable, for: [self.playerChosen.peerID])
         }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -91,6 +92,7 @@ class PreBattleViewControllerTVOS: UIViewController {
         if let playerToStart = self.playerToStart {
             if let battleViewController = self.storyboard?.instantiateViewController(withIdentifier: "battleViewController") as? BattleGameViewController {
                 battleViewController.currentPlayer = playerToStart
+                battleViewController.starterPlayer = playerToStart
                 battleViewController.battle = self.currentBattle
                 self.audioPlayer.stop()
                 self.present(battleViewController, animated: true, completion: nil)

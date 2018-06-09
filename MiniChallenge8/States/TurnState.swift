@@ -42,9 +42,11 @@ class TurnState: State {
 //            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
 //                $0.peerID == self.viewController.currentPlayer.peerID
 //            })
-
-            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
-            MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
+//
+//            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
+//            MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
+            
+            MPHelper.shared.send(data: datum, dataMode: .reliable)
             
         }
         
@@ -146,8 +148,10 @@ class TurnState: State {
     }
     
     func prepareTurnStateToEnd() {
-        if let data = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
-            MPHelper.shared.send(data: data, dataMode: .reliable)
+        DispatchQueue.main.async {
+            if let data = try? JSONEncoder().encode(DisplayScreen(screen: .waiting)) {
+                MPHelper.shared.send(data: data, dataMode: .reliable)
+            }
         }
         
         self.didStartTurn = false
@@ -173,16 +177,16 @@ class TurnState: State {
             
         }
         
-        
-        self.viewController.currentPlayer = nextPlayer
         UIView.animate(withDuration: 1, animations: {
             currentPlayerAvatar.frame.origin = currentPlayerOrigin
             currentPlayerAvatar.frame.size = currentPlayerSize
         }, completion: { _ in
             self.viewController.battle.rounds.last!.turns += 1
             if self.viewController.battle.rounds.last!.turns == 2 {
+                self.viewController.currentPlayer = self.viewController.starterPlayer
                 self.viewController.moveTo(state: NextRoundState(viewController: self.viewController))
             } else {
+                self.viewController.currentPlayer = nextPlayer
                 self.viewController.moveTo(state: StartTurnState(viewController: self.viewController))
             }
         })
