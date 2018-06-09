@@ -120,6 +120,8 @@ class PreBattleViewControllerTVOS: UIViewController {
         }
         self.choosenLabel.text = "Quem vai começar é o \(String(describing: self.playerToStart!.name)) aperte o botão do controle para continuar"
         self.battleButton.isEnabled = true
+        self.battleButton.setNeedsFocusUpdate()
+        self.updateFocusIfNeeded()
     }
     
 }
