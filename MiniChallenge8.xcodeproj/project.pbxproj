@@ -635,7 +635,6 @@
 				BD6DB4D620BEE11D00F8ABDE /* BattleGameViewController.swift in Sources */,
 				BD7799CB20BEE6550081C42F /* Turn.swift in Sources */,
 				ECBC4BB720CAFDC4002B0FE1 /* LeaderboardViewController.swift in Sources */,
-				BD6DB4C020BE2B9600F8ABDE /* RoundWinnerState.swift in Sources */,
 				BD6DB4C220BE2BA100F8ABDE /* NextRoundState.swift in Sources */,
 				BD6DB4B620BE28F600F8ABDE /* MPServices.swift in Sources */,
 				ECBC4BB920CAFE69002B0FE1 /* LeaderboardTableViewCell.swift in Sources */,
