@@ -42,11 +42,11 @@ class TurnState: State {
 //            let playerBattlingPeerIDs = self.viewController.battle.championship.players.filter({
 //                $0.peerID == self.viewController.currentPlayer.peerID
 //            })
-//
-//            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
-//            MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
+
+            MPHelper.shared.send(data: datum, dataMode: .reliable, for: playersFeedbackingPeerIDs.map({ return $0.peerID }))
+            MPHelper.shared.send(data: notDatum, dataMode: .reliable, for: playerBattlingPeerIDs.map({ return $0.peerID }))
             
-            MPHelper.shared.send(data: datum, dataMode: .reliable)
+//            MPHelper.shared.send(data: datum, dataMode: .reliable)
             
         }
         
