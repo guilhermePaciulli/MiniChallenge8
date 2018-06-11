@@ -62,8 +62,7 @@ class BattleGameViewController: UIViewController {
                                   self.battle.player2.peerID: self.player2Avatar.frame.size]
         
         self.currentState = StartTurnState(viewController: self)
-        if let willEnterState = self.currentState.willEnterState { willEnterState() }
-        
+        if let willEnterState = self.currentState.willEnterState { willEnterState() } 
         self.playSong()
         
     }

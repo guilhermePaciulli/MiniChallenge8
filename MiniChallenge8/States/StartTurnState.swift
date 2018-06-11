@@ -25,10 +25,10 @@ class StartTurnState: State {
         
         self.viewController.player2NameLabel.text = self.viewController.battle.player2.name
         self.viewController.player2Avatar.image = self.viewController.battle.player2.avatar
-
+        
         self.viewController.countdownLabel.isHidden = false
-    }
-    
+    } 
+        
     func didEnterState() {
         if self.viewController.battle.rounds.count == 0 {
             self.viewController.battle.rounds.append(Round())

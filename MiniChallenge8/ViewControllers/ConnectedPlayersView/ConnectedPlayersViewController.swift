@@ -22,7 +22,7 @@ class ConnectedPlayersViewController: UIViewController, UICollectionViewDelegate
     
     var connectedPlayers: [Player] = []
     
-    let minimumPlayers = 2
+    let minimumPlayers = 3
     
     var audioPlayer = AVAudioPlayer()
     
